@@ -1,0 +1,210 @@
+/* Sajeel Malik
+style.css
+
+Color Theme: 
+#FCE575 (Gold), FFD447 (Darker Gold)
+#ED254E (Magenta)
+#3943B7 (Blue), 000022 (Darker Blue) 
+#A4036F (Purple)
+
+Text:
+#DAFFED Light Blue
+#F4FFFD (Light Gray)
+#6C756B (Dark Gray)
+*/
+
+/* body{
+  min-height: 100%;
+  align-items: center;
+  justify-content: center 
+} */
+
+
+/* SPLASH PAGE STYLING - INTRODUCTION, RADIAL GRADIENT, AND FIREWORKS */
+.introduction{
+    position: relative;
+    width: 100%;
+    height: 100vh;
+    overflow: hidden;
+    cursor: crosshair;
+  
+  }
+  
+  .radial-gradient {
+    position:absolute;
+    top:0px;
+    left:0px;
+    height:100vh;
+    width:100%;
+    z-index: -1;
+    overflow: hidden;
+    transition: 1s ease;
+    /*Fallback if gradients don't work */
+    background: #f8f0cd;
+    /*Linear gradient... */
+    background: 
+      radial-gradient(
+       at center, #f5f5f5, #f8f0cd
+      );
+  }
+  
+  canvas{
+    position:absolute;
+    top:0px;
+    left:0px;
+    height:100vh;
+    width:100%;
+  }
+  
+  h1{
+    font-family: 'Oswald', sans-serif;
+    text-align: center;
+    font-size: 64px;
+    letter-spacing: 3px;
+  }
+  
+  h2, h3{
+    font-family: "Montserrat", sans-serif;
+  } 
+  
+  th, ul, p{
+    font-family: 'Lato', sans-serif;
+  }
+  
+  td{
+    padding: 5px;
+  }
+  
+  .title{
+    margin: 17% 0 30px 0;
+    position: relative;
+    /* top: 15%; */
+    height: 10px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+  
+  .title h1{
+    width: 40%;
+    font-family: 'Oswald', sans-serif;
+    text-align: center;
+    font-size: 72px;
+    font-weight: 300;
+    letter-spacing: 4px;
+    color: rgb(91, 90, 104);
+    cursor: cell;
+    transition: 1.5s ease;
+  
+    /* font-weight: bold; */
+  }
+  
+  .title h1:hover{
+    color: rgb(43, 43, 49);
+    text-shadow: 1px 1px 1px 1px rgb(96, 96, 104);
+    /* background-color: #ffe880; */
+  }
+  
+  .title h1::selection {
+    background: #ffe880; /* WebKit/Blink Browsers */
+    text-transform: uppercase;
+  }
+  
+  .name {
+    position: relative;
+    display: inline-block;
+    transition: color 0.2s ease;
+  }
+  
+  .name::after, .name::before {
+    content: "";
+    position: absolute;
+    width: 0;
+    right: 0;
+    height: 20px;
+    bottom: -28px;
+    z-index: -1;
+  }
+  
+  .name:hover::after, .name:hover::before {
+    display: block;
+    width: 100%;
+    left: 0;
+    bottom: -28px;
+  }
+  
+  #sajeel::before{
+    -webkit-transition: width 0.6s cubic-bezier(0.51, 0.18, 0, 0.88) 0.1s;
+    background: #fce995;
+  }
+  
+  #sajeel::after {
+    /* transition: width 0.2s cubic-bezier(0.29, 0.18, 0.26, 0.83); */
+    -webkit-transition: width 0.4s cubic-bezier(0.29, 0.18, 0.26, 0.83);
+    background: #ffe880;
+  }
+
+  #loading {
+    position: relative;
+    margin: auto;
+    margin-bottom: 15px;
+    width: 20px;
+    height: 20px;
+    background-color: transparent;
+    transition: 0.5s ease;
+  }
+  
+  .social-buttons{
+    margin: auto;
+    position: relative;
+    display: flex;
+    width: 30%;
+    align-items: center;
+    justify-content: space-evenly;
+  }
+  
+  .fa-linkedin, .fa-github, .fa-instagram, .fa-medium{
+    color: rgb(143, 142, 142);
+    transition: 0.3s ease-out;
+    /* text-shadow: 0.5px 0.5px 0.5px rgb(149, 149, 156); */
+  }
+  
+  .fa-linkedin:hover {
+    color: rgb(47, 101, 218);
+    /* transition: 0.3s ease; */
+    font-size: 54px;
+    text-shadow: 0.5px 0.5px 0.5px rgb(47, 101, 218);
+  
+  }
+  
+  .fa-github:hover {
+    color: black;
+    /* transition: 0.3s ease; */
+    font-size: 54px;
+    text-shadow: 0.5px 0.5px 0.5px black;
+  }
+  
+  /* .fa-instagram:hover {
+    background-color: linear-gradient(to top right, #ff6600 0%, #ff66ff 100%);
+    transition: 0.3s ease;
+  } */
+  
+  /* add hover gradient to instagram */
+  .fa-instagram:hover {
+    background: -webkit-gradient(linear, left bottom, left top, from(#ff6600), to(#ff66ff));
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    /* transition: 0.3s ease; */
+    font-size: 56px;
+    /* text-shadow: 0.5px 1.5px 0.5px #ff66ba7c; */
+  
+  }
+  
+  .fa-medium:hover {
+    color: black;
+    /* transition: 0.3s ease; */
+    font-size: 54px;
+    text-shadow: 0.5px 0.5px 0.5px black;
+  }
+
+  
