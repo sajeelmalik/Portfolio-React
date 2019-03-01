@@ -9,7 +9,7 @@ import Main from './pages/Main';
 // import { createMuiTheme } from '@material-ui/core/styles';
 // import MuiThemeProvider from '@material-ui/core/styles/MuiThemeProvider';
 
-// import "./App.css";
+import "./App.css";
 
 class App extends Component {
   render() {
