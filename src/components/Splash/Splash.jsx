@@ -19,6 +19,7 @@ class Splash extends Component {
 
     state = {
         nameClicked: false,
+        showBio: false,
         mousex: 0,
         mousey: 0,
         windowWidth: 0,
@@ -64,6 +65,13 @@ class Splash extends Component {
             nameClicked: true
         });
 
+        setTimeout(() => {
+            this.setState({
+                showBio: true
+            });
+
+        }, 2000)
+
 
     }
 
@@ -82,19 +90,19 @@ class Splash extends Component {
 
                     </div>
 
-                    {/* <div className="bio" style = {{display: this.state.nameClicked ? "block" : "none"}}>
+                    <div className="bio" style = {{display: this.state.showBio ? "block" : "none"}}>
                         <Fade>
                             <p>Hey, I'm Sajeel! I'm a software engineer with a passion for teaching, research, and medicine. Read
                     more <a href="#" className="bio-links" id="about-link">About Me</a>, see my <a href="#portfolio" className="bio-links"
                                     id="portfolio-link" uk-scroll>Portfolio</a>, or <a href="#footer" className="bio-links" id="contact-link"
                                         uk-scroll>Contact Me</a>.</p>
                         </Fade>
-                    </div> */}
+                    </div>
 
                     {/* <!-- Placeholder to assess transition area --> */}
                     <div id="loading"></div>
                     {/* <!-- <div id="box-animation"></div> --> */}
-
+                    {/* {this.state.showBio ? <Fade out> : ""} */}
                     <div className="social-buttons"><Fade bottom>
                         <a href="https://www.linkedin.com/in/sajeel-malik-545a838b/">
                             <p><i className="fab fa-linkedin fa-3x"></i></p>
@@ -110,6 +118,8 @@ class Splash extends Component {
                         </a>
                     </Fade>
                     </div>
+                    {/* {this.state.showBio ? </Fade> : ""} */}
+
 
                 </div>
 
