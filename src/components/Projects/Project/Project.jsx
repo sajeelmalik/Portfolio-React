@@ -22,6 +22,14 @@ const styles = {
     media: {
         height: 240,
     },
+    header: {
+        fontFamily: 'Oswald, sans-serif'
+
+    },
+    description: {
+        fontFamily: 'Lato, sans-serif'
+
+    }
 };
 
 const Project = (props) => {
@@ -36,10 +44,10 @@ const Project = (props) => {
                     title={props.title}
                 />
                 <CardContent>
-                    <Typography gutterBottom variant="h5" component="h2">
+                    <Typography gutterBottom variant="h5" component="h2" className={classes.header}>
                         {props.title}
                     </Typography>
-                    <Typography component="p">
+                    <Typography component="p" className={classes.description}>
                         {props.description}
                     </Typography>
                 </CardContent>

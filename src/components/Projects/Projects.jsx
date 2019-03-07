@@ -10,19 +10,20 @@ import "./Projects.css"
 const projects = [
     {
         title: "Tempo",
-        image: "",
-        description: ""
+        image: "assets/images/box-logo.png",
+        description: "Tempo is a virtual booking agent that allows musicians to stay independent by mitigating the friction in the booking and gigging industry."
     },
     {
         title: "Dev Lab",
-        image: "",
-        description: ""
+        image: "assets/images/DevLab.gif",
+        description: "DevLab is a crowd-sourced platform for learning how to code. As developers, we are often bombarded with an overwhelming flood of resources. DevLab seeks to wade through the flood by providing a robust, user-driven tool to pool the best resources!"
     },
     {
         title: "Mt. Sutro",
-        image: "",
-        description: ""
-    }
+        image: "assets/images/MtSutro.gif",
+        description: "Mt. Sutro Music Company is a platform that allows its associates to grow and excel in the emerging music industry by connecting, engaging, and conducting business in and around the San Francisco music scene."
+    },
+    
 ]
 
 class Projects extends Component {

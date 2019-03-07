@@ -100,7 +100,7 @@ class Splash extends Component {
                     </div>
 
                     {/* <!-- Placeholder to assess transition area --> */}
-                    <div id="loading"></div>
+                    <div id="loading" style={{ backgroundColor: this.state.showBio ? "#ffe880" : "transparent", width: this.state.showBio ? "80%" : ""}}></div>
                     {/* <!-- <div id="box-animation"></div> --> */}
                     {/* {this.state.showBio ? <Fade out> : ""} */}
                     <div className="social-buttons"><Fade bottom>
