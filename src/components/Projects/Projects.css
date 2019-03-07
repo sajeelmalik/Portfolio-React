@@ -49,8 +49,9 @@
     background: #3943B7;
   }
 
-  #projects{
+  #projects, #featured-project{
       display: flex;
       justify-content: space-around;
       margin-top: 100px;
+      flex-wrap: wrap;
   }

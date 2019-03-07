@@ -165,7 +165,7 @@ Text:
     justify-content: space-evenly;
   }
   
-  .fa-linkedin, .fa-github, .fa-instagram, .fa-medium{
+  .fa-linkedin, .github-icon, .fa-instagram, .fa-medium{
     color: rgb(143, 142, 142);
     transition: 0.3s ease-out;
     /* text-shadow: 0.5px 0.5px 0.5px rgb(149, 149, 156); */
@@ -179,7 +179,7 @@ Text:
   
   }
   
-  .fa-github:hover {
+  .github-icon:hover {
     color: black;
     /* transition: 0.3s ease; */
     font-size: 54px;

@@ -94,8 +94,8 @@ class Splash extends Component {
                         <Fade>
                             <p>Hey, I'm Sajeel! I'm a software engineer with a passion for teaching, research, and medicine. Read
                     more <a href="#" className="bio-links" id="about-link">About Me</a>, see my <a href="#portfolio" className="bio-links"
-                                    id="portfolio-link" uk-scroll>Portfolio</a>, or <a href="#footer" className="bio-links" id="contact-link"
-                                        uk-scroll>Contact Me</a>.</p>
+                                    id="portfolio-link" >Portfolio</a>, or <a href="#footer" className="bio-links" id="contact-link"
+                                        >Contact Me</a>.</p>
                         </Fade>
                     </div>
 
@@ -108,7 +108,7 @@ class Splash extends Component {
                             <p><i className="fab fa-linkedin fa-3x"></i></p>
                         </a>
                         <a href="https://github.com/sajeelmalik">
-                            <p><i className="fab fa-github fa-3x"></i></p>
+                            <p><i className="fab fa-github fa-3x github-icon"></i></p>
                         </a>
                         <a href="https://www.instagram.com/smak23/">
                             <p><i className="fab fa-instagram fa-3x"></i></p>
