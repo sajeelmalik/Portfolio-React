@@ -1,0 +1,26 @@
+#skills{
+    /* text-align: left; */
+    width: 100%;
+    margin-bottom: 40px;
+  }
+  
+#skills::selection{
+    background: rgb(158, 58, 125);
+    color: white;
+  }
+
+#skills::before{
+    -webkit-transition: width 0.6s cubic-bezier(0.51, 0.18, 0, 0.88) 0.1s;
+    background: rgb(158, 58, 125);
+    transition: width 0.6s cubic-bezier(0.51, 0.18, 0, 0.88) 0.1s;
+    background: rgb(158, 58, 125);
+  }
+  
+#skills::after {
+    /* transition: width 0.2s cubic-bezier(0.29, 0.18, 0.26, 0.83); */
+    -webkit-transition: width 0.4s cubic-bezier(0.29, 0.18, 0.26, 0.83);
+    background: rgb(167, 13, 116);
+    transition: width 0.4s cubic-bezier(0.29, 0.18, 0.26, 0.83);
+    background: rgb(167, 13, 116);
+    
+  }

@@ -31,14 +31,14 @@ const projects = [
     },
     {
         title: "Dev Lab",
-        image: "assets/images/DevLab.gif",
+        image: "assets/images/DevLab.png",
         description: "DevLab is a crowd-sourced platform for learning how to code. As developers, we are often bombarded with an overwhelming flood of resources. DevLab seeks to wade through the flood by providing a robust, user-driven tool to pool the best resources!",
         readme: "assets/READMEs/DevLab.md"
 
     },
     {
         title: "Mt. Sutro",
-        image: "assets/images/MtSutro.gif",
+        image: "assets/images/MtSutro.png",
         description: "Mt. Sutro Music Company is a platform that allows its associates to grow and excel in the emerging music industry by connecting, engaging, and conducting business in and around the San Francisco music scene.",
         readme: "assets/READMEs/MtSutro.md"
     }, {

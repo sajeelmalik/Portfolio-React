@@ -24,7 +24,7 @@
     right: 0;
     height: 20px;
     bottom: -28px;
-    z-index: -1;
+    z-index: 100;
   }
   
   .screen:hover::after, .screen:hover::before {

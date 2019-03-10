@@ -2,7 +2,8 @@ import React, { Component } from 'react';
 
 // Components
 import Splash from "../../components/Splash";
-import Projects from "../../components/Projects"
+import Skills from "../../components/Skills";
+import Projects from "../../components/Projects";
 
 
 class Main extends Component {
@@ -12,6 +13,7 @@ class Main extends Component {
         return (
             <React.Fragment>
                 <Splash></Splash>
+                <Skills></Skills>
                 <Projects></Projects>
             </React.Fragment>
         )

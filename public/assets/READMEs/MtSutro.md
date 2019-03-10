@@ -1,4 +1,4 @@
-# Mt-Sutro
+# Mt Sutro
 
 Mt. Sutro Music Company is a platform that allows its associates to grow and excel in the emerging music industry by connecting, engaging, and conducting business in and around the San Francisco music scene.
 

@@ -22,7 +22,11 @@ const styles = {
     card: {
         width: "325px",
         maxWidth: 345,
-        marginBottom: "20px"
+        marginBottom: "20px",
+        display: "flex",
+        flexDirection: "column",
+        justifyContent: "space-between",
+        borderRadius: "10px"
     },
     featuredCard: {
         width: "95%",
@@ -68,7 +72,7 @@ const Project = (props) => {
             </CardActionArea>
             <CardActions className={classes.cardActions}>
                 <div>
-                    <IconButton aria-label="Share" color="default">
+                    <IconButton aria-label="Share" color="secondary">
                         <i className="fab fa-github"></i>
                     </IconButton>
                     <IconButton aria-label="Share" color="secondary">
