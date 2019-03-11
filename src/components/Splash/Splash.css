@@ -166,13 +166,13 @@ Text:
     transition: 1.5s ease;
   }
   
-  .fa-linkedin, .github-icon, .fa-instagram, .fa-medium{
+  .linkedin-icon, .github-icon, .instagram-icon, .medium-icon{
     color: rgb(143, 142, 142);
     transition: 0.3s ease-out;
     /* text-shadow: 0.5px 0.5px 0.5px rgb(149, 149, 156); */
   }
   
-  .fa-linkedin:hover {
+  .linkedin-icon:hover {
     color: rgb(47, 101, 218);
     /* transition: 0.3s ease; */
     font-size: 54px;
@@ -187,13 +187,13 @@ Text:
     text-shadow: 0.5px 0.5px 0.5px black;
   }
   
-  /* .fa-instagram:hover {
+  /* .instagram-icon:hover {
     background-color: linear-gradient(to top right, #ff6600 0%, #ff66ff 100%);
     transition: 0.3s ease;
   } */
   
   /* add hover gradient to instagram */
-  .fa-instagram:hover {
+  .instagram-icon:hover {
     background: -webkit-gradient(linear, left bottom, left top, from(#ff6600), to(#ff66ff));
     -webkit-background-clip: text;
     background-clip: text;
@@ -204,7 +204,7 @@ Text:
   
   }
   
-  .fa-medium:hover {
+  .medium-icon:hover {
     color: black;
     /* transition: 0.3s ease; */
     font-size: 54px;

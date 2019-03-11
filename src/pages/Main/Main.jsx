@@ -24,17 +24,17 @@ class Main extends Component {
                         <div id="footer-content">
                             <img id="footer-logo" src="assets/images/SM.png"></img>
                             <div className="footer-social-buttons">
-                                <a href="https://www.linkedin.com/in/sajeel-malik-545a838b/">
-                                    <p><i className="fab fa-linkedin fa-3x"></i></p>
+                                <a target = "_blank" href="https://www.linkedin.com/in/sajeel-malik-545a838b/">
+                                    <p class = "footer-contact"><i className="fab fa-linkedin fa-3x footer-icons"></i></p>
                                 </a>
-                                <a href="https://github.com/sajeelmalik">
-                                    <p><i className="fab fa-github fa-3x github-icon"></i></p>
+                                <a target = "_blank" href="https://github.com/sajeelmalik">
+                                    <p class = "footer-contact"><i className="fab fa-github fa-3x footer-icons"></i></p>
                                 </a>
-                                <a href="https://www.instagram.com/smak23/">
-                                    <p><i className="fab fa-instagram fa-3x"></i></p>
+                                <a target = "_blank" href="https://www.instagram.com/smak23/">
+                                    <p class = "footer-contact"><i className="fab fa-instagram fa-3x footer-icons"></i></p>
                                 </a>
-                                <a href="https://medium.com/@sajeel23">
-                                    <p><i className="fab fa-medium fa-3x"></i></p>
+                                <a target = "_blank" href="https://medium.com/@sajeel23">
+                                    <p class = "footer-contact"><i className="fab fa-medium fa-3x footer-icons"></i></p>
                                 </a>
 
                             </div>

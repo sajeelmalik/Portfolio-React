@@ -20,12 +20,28 @@
     height: 30%;
 }
 
-#footer-social-buttons{
+/* .footer-social-buttons{
     display: flex;
     flex-direction: column;
-}
+} */
 
 .footer-icons{
     color:#DAFFED;
+    transition: 0.15s ease-in-out;
+    margin-right: 10px;
+    text-decoration: none;
 }
+
+.footer-icons:hover{
+    color:#FCE575;
+    transform: scale(1.0);
+    /* font-size: inherit; */
+}
+
+/* .footer-contact{
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    text-decoration: none;
+} */
 

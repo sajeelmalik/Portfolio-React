@@ -78,10 +78,11 @@ class Splash extends Component {
 
     render() {
 
+        console.log(this.state.mouseXpercentage, this.state.mouseYpercentage);
         return (
             <div>
                 <canvas className="fireworks"></canvas>
-                <div className="introduction" onMouseMove={() => this.handleMouseMove}>
+                <div className="introduction" onMouseMove={(event) => this.handleMouseMove(event)}>
                     <div className="radial-gradient" style={{ background: 'radial-gradient(at ' + this.state.mouseXpercentage + '% ' + this.state.mouseYpercentage + '%,  #f5f5f5, #f8f0cd)' }}></div>
                     <div className="title">
 
@@ -108,16 +109,16 @@ class Splash extends Component {
                     {/* {this.state.showBio ? <Fade out> : ""} */}
                     <div className={`social-buttons ${this.state.nameClicked ? "fadeOut" : ""}`} style={{ display: this.state.showBio ? "none" : "black" }}><Fade bottom>
                         <a href="https://www.linkedin.com/in/sajeel-malik-545a838b/">
-                            <p><i className="fab fa-linkedin fa-3x"></i></p>
+                            <p><i className="fab fa-linkedin fa-3x linkedin-icon"></i></p>
                         </a>
                         <a href="https://github.com/sajeelmalik">
                             <p><i className="fab fa-github fa-3x github-icon"></i></p>
                         </a>
                         <a href="https://www.instagram.com/smak23/">
-                            <p><i className="fab fa-instagram fa-3x"></i></p>
+                            <p><i className="fab fa-instagram fa-3x instagram-icon"></i></p>
                         </a>
                         <a href="https://medium.com/@sajeel23">
-                            <p><i className="fab fa-medium fa-3x"></i></p>
+                            <p><i className="fab fa-medium fa-3x  medium-icon"></i></p>
                         </a>
                     </Fade>
                     </div>
