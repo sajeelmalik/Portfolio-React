@@ -15,7 +15,7 @@ import Typography from '@material-ui/core/Typography';
 import CloseIcon from '@material-ui/icons/Close';
 import Slide from '@material-ui/core/Slide';
 
-//Markdown Converter
+// Markdown Converter
 import MDReactComponent from 'markdown-react-js';
 
 // Styling
@@ -27,34 +27,59 @@ const projects = [
         title: "Tempo",
         image: "assets/images/box-logo.png",
         description: "Tempo is a virtual booking agent that allows musicians to stay independent by mitigating the friction in the booking and gigging industry.",
-        readme: "assets/READMEs/Tempo.md"
+        readme: "assets/READMEs/Tempo.md",
+        github: "https://github.com/NasibNia/Tempo",
+        deployed: "https://tempodemo.herokuapp.com"
     },
     {
         title: "Dev Lab",
         image: "assets/images/DevLab.png",
         description: "DevLab is a crowd-sourced platform for learning how to code. As developers, we are often bombarded with an overwhelming flood of resources. DevLab seeks to wade through the flood by providing a robust, user-driven tool to pool the best resources!",
-        readme: "assets/READMEs/DevLab.md"
+        readme: "assets/READMEs/DevLab.md", 
+        github: "https://github.com/sajeelmalik/Dev-Lab",
+        deployed: "http://devlab.herokuapp.com/"
+
 
     },
     {
         title: "Mt. Sutro",
         image: "assets/images/MtSutro.png",
         description: "Mt. Sutro Music Company is a platform that allows its associates to grow and excel in the emerging music industry by connecting, engaging, and conducting business in and around the San Francisco music scene.",
-        readme: "assets/READMEs/MtSutro.md"
-    }, {
-        title: "Tempo",
-        image: "assets/images/box-logo.png",
-        description: "Tempo is a virtual booking agent that allows musicians to stay independent by mitigating the friction in the booking and gigging industry."
+        readme: "assets/READMEs/MtSutro.md",
+        github: "https://github.com/sajeelmalik/Mt-Sutro",
+        deployed: "https://sutromusic.com"
+    }, 
+    {
+        title: "Pet Package",
+        image: "assets/images/Pet Package.png",
+        description: "Pet Package is an API-driven platform that allows pet-seekers to search and contact local humane societies and adoption clinics by offering geographic references!",
+        readme: "assets/READMEs/PetPackage.md",
+        github: "https://github.com/sajeelmalik/Pet-Package",
+        deployed: "https://sajeelmalik.github.io/Pet-Package/"
     },
     {
-        title: "Dev Lab",
+        title: "Rap God",
         image: "assets/images/DevLab.gif",
-        description: "DevLab is a crowd-sourced platform for learning how to code. As developers, we are often bombarded with an overwhelming flood of resources. DevLab seeks to wade through the flood by providing a robust, user-driven tool to pool the best resources!"
+        description: "DevLab is a crowd-sourced platform for learning how to code. As developers, we are often bombarded with an overwhelming flood of resources. DevLab seeks to wade through the flood by providing a robust, user-driven tool to pool the best resources!",
+        readme: "assets/READMEs/MtSutro.md",
+        github: "https://github.com/sajeelmalik/Rap-Trivia",
+        deployed: "https://sajeelmalik.github.io/Rap-Trivia/"
+    },
+    {
+        title: "Legend of Zelda RPG",
+        image: "",
+        description: "Mt. Sutro Music Company is a platform that allows its associates to grow and excel in the emerging music industry by connecting, engaging, and conducting business in and around the San Francisco music scene.",
+        readme: "assets/READMEs/MtSutro.md",
+        github: "https://github.com/sajeelmalik/Legend-of-Zelda-RPG",
+        deployed: "https://sajeelmalik.github.io/Legend-of-Zelda-RPG/"
     },
     {
         title: "Mt. Sutro",
-        image: "assets/images/MtSutro.gif",
-        description: "Mt. Sutro Music Company is a platform that allows its associates to grow and excel in the emerging music industry by connecting, engaging, and conducting business in and around the San Francisco music scene."
+        image: "",
+        description: "Mt. Sutro Music Company is a platform that allows its associates to grow and excel in the emerging music industry by connecting, engaging, and conducting business in and around the San Francisco music scene.",
+        readme: "assets/READMEs/MtSutro.md",
+        github: "google.com",
+        deployed: "google.com"
     },
 
 ]
@@ -68,7 +93,7 @@ const styles = {
         flex: 1,
     },
     markdown: {
-        display: "inline-block",
+        // display: "inline-block",
         maxWidth: "100%",
         width: "100%",
         overflow: "none"
@@ -128,14 +153,15 @@ class Projects extends Component {
                         <h2 style={{ textAlign: "left" }}>Featured</h2>
                         {projects.slice(0, 1).map(elem => {
                             keyCount++;
-                            return <Project key={keyCount} title={elem.title} image={elem.image} description={elem.description} featured={true} click={() => this.handleClickOpen(elem.title, elem.readme)} />
+                            return <Project key={keyCount} title={elem.title} image={elem.image} description={elem.description} featured={true} github = {elem.github} deployed = {elem.deployed} click={() => this.handleClickOpen(elem.title, elem.readme)} />
                         })}
                     </div>
                     {/* <hr></hr> */}
+                    <h3 style={{ textAlign: "left" }}>Selected Projects</h3>
                     <div id="projects">
                         {projects.slice(1, projects.length).map(elem => {
                             keyCount++;
-                            return <Project key={keyCount} title={elem.title} image={elem.image} description={elem.description} featured={false} click={() => this.handleClickOpen(elem.title, elem.readme)} />
+                            return <Project key={keyCount} title={elem.title} image={elem.image} description={elem.description} featured={false} github = {elem.github} deployed = {elem.deployed} click={() => this.handleClickOpen(elem.title, elem.readme)} />
                         })}
                     </div>
 
@@ -159,8 +185,8 @@ class Projects extends Component {
                                 </Button>
                         </Toolbar>
                     </AppBar>
-                    <div className = "container">
-                        <MDReactComponent className = {classes.markdown} text={this.state.readmeText} />
+                    <div className = "container" id = "markdown">
+                        <MDReactComponent  text={this.state.readmeText} />
                     </div>
                 </Dialog>
             </React.Fragment>

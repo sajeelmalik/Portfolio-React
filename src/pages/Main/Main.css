@@ -1,0 +1,31 @@
+#footer{
+    width: 100%;
+    height: 40vh;
+    background-color: #000022;
+}
+
+#footer-container{
+    width: 60%;
+    margin: 30px auto;
+}
+
+#footer-content{
+    display: flex !important;
+    justify-content: center;
+    align-items: center;
+}
+
+#footer-logo{
+    width: 30%;
+    height: 30%;
+}
+
+#footer-social-buttons{
+    display: flex;
+    flex-direction: column;
+}
+
+.footer-icons{
+    color:#DAFFED;
+}
+

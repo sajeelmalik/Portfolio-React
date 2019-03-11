@@ -148,8 +148,8 @@ Text:
 
   #loading {
     position: relative;
-    margin: auto;
-    margin-bottom: 15px;
+    margin: 43px auto 0 auto;
+    /* margin-bottom: 15px; */
     width: 20px;
     height: 20px;
     background-color: transparent;
@@ -163,6 +163,7 @@ Text:
     width: 30%;
     align-items: center;
     justify-content: space-evenly;
+    transition: 1.5s ease;
   }
   
   .fa-linkedin, .github-icon, .fa-instagram, .fa-medium{
@@ -211,3 +212,111 @@ Text:
   }
 
   
+.bio{
+  display: none;
+  position: relative;
+  font-family: 'Lato', sans-serif;
+  font-size: 1.6em;
+  line-height: 2.3em;
+  margin: 0 40% 0 10%;
+  padding-top: 20px;
+  transition: 1s ease;
+}
+
+.bio p::selection {
+  background: #ffe880; /* WebKit/Blink Browsers */
+  text-transform: uppercase;
+}
+
+#about-link{
+  color: #ED254E;
+}
+
+#portfolio-link{
+  color: #3943B7;
+}
+
+#contact-link{
+  color: rgb(125, 219, 99);
+}
+
+.bio-links {
+  position: relative;
+  display: inline-block;
+  transition: color 0.2s ease;
+  text-decoration: none;  
+}
+
+.bio-links:hover{
+  text-decoration: none;  
+}
+
+.bio-links::after, .bio-links::before {
+  content: "";
+  position: absolute;
+  width: 0;
+  right: 0;
+  height: 8px;
+  bottom: 8px;
+  z-index: -1;
+}
+
+.bio-links:hover::after, .bio-links:hover::before {
+  display: block;
+  width: 100%;
+  left: 0;
+  bottom: 8px;
+}
+
+#about-link::before{
+  -webkit-transition: width 0.6s cubic-bezier(0.51, 0.18, 0, 0.88) 0.1s;
+  background: rgb(238, 125, 147);
+  transition: width 0.6s cubic-bezier(0.51, 0.18, 0, 0.88) 0.1s;
+  background: rgb(238, 125, 147);
+}
+
+#about-link::after {
+  /* transition: width 0.2s cubic-bezier(0.29, 0.18, 0.26, 0.83); */
+  -webkit-transition: width 0.4s cubic-bezier(0.29, 0.18, 0.26, 0.83);
+  background: rgb(233, 74, 106);
+  transition: width 0.4s cubic-bezier(0.29, 0.18, 0.26, 0.83);
+  background: rgb(233, 74, 106);
+}
+
+
+#portfolio-link::before{
+  -webkit-transition: width 0.6s cubic-bezier(0.51, 0.18, 0, 0.88) 0.1s;
+  background: rgb(124, 129, 187);
+  transition: width 0.6s cubic-bezier(0.51, 0.18, 0, 0.88) 0.1s;
+  background: rgb(124, 129, 187);
+}
+
+#portfolio-link::after {
+  /* transition: width 0.2s cubic-bezier(0.29, 0.18, 0.26, 0.83); */
+  -webkit-transition: width 0.4s cubic-bezier(0.29, 0.18, 0.26, 0.83);
+  background: rgb(85, 93, 182);
+  transition: width 0.4s cubic-bezier(0.29, 0.18, 0.26, 0.83);
+  background: rgb(85, 93, 182);
+}
+
+#contact-link::before{
+  -webkit-transition: width 0.6s cubic-bezier(0.51, 0.18, 0, 0.88) 0.1s;
+  background: rgb(173, 233, 156);
+  transition: width 0.6s cubic-bezier(0.51, 0.18, 0, 0.88) 0.1s;
+  background: rgb(173, 233, 156);
+}
+
+#contact-link::after {
+  /* transition: width 0.2s cubic-bezier(0.29, 0.18, 0.26, 0.83); */
+  -webkit-transition: width 0.4s cubic-bezier(0.29, 0.18, 0.26, 0.83);
+  background: rgb(148, 214, 130);
+  transition: width 0.4s cubic-bezier(0.29, 0.18, 0.26, 0.83);
+  background: rgb(148, 214, 130);
+}
+
+
+  /* ANimations */
+
+  .fadeOut{
+    opacity: 0;
+  }

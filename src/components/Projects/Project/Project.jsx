@@ -22,7 +22,7 @@ const styles = {
     card: {
         width: "325px",
         maxWidth: 345,
-        marginBottom: "20px",
+        marginBottom: "40px",
         display: "flex",
         flexDirection: "column",
         justifyContent: "space-between",
@@ -73,10 +73,10 @@ const Project = (props) => {
             <CardActions className={classes.cardActions}>
                 <div>
                     <IconButton aria-label="Share" color="secondary">
-                        <i className="fab fa-github"></i>
+                        <a target = "_blank" href={props.github}><i className="fab fa-github"></i></a>
                     </IconButton>
                     <IconButton aria-label="Share" color="secondary">
-                        <ShareIcon />
+                        <a target = "_blank" href={props.deployed}><ShareIcon /></a>
                     </IconButton>
                 </div>
                 <div>

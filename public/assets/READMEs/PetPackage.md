@@ -17,13 +17,12 @@ Often, we overlook the needs of animals in our own locales due to our hectic dai
 Follow the deployed project link below to utilize the application.
 
 ### Deployed Project Link
-<!-- make a link to the deployed site -->
  
 [Pet Package](skeeis.github.io/Pet-Package/)
 
 
 ### Image Preview of Pet Package
-<!-- take a picture of the image and add it into the readme  -->
+
 [![Pet Package Preview](https://raw.githubusercontent.com/SkeeIs/Pet-Package/master/img/Preview1.PNG "Pet Package")](skeeis.github.io/Pet-Package/)
 
 ## Prerequisites
@@ -59,8 +58,6 @@ In the United States alone, there are over 1000 searches per hour of users looki
 ![Pet Package Sketch Mockup](https://raw.githubusercontent.com/SkeeIs/Pet-Package/master/graphics/Query.png "Mockup")
 
 # Code Snippets
-<!-- put snippets of code inside ``` ``` so it will look like code -->
-<!-- if you want to put blockquotes use a > -->
 
 Here, we queried Petfinder’s API with a jQuery AJAX call and created unique conditional statements to check whether certain pet characteristics existed for each pet. Since Petfinder’s API has different requirements and different outputs for each query, we had to make sure that each parameter existed before we proceeded. 
 
@@ -73,7 +70,7 @@ Then, we embed a "data-location" attribute within each pet thumbnail on the page
 
 We also implemented dynamic CSS styling upon creation of new HTML elements. 
 
-```
+```Javascript
 $(document).on("click", "#hideShow", function (){
    hideShow();
 });
@@ -105,9 +102,8 @@ function hideShow() {
 
 ```
 
-
 # Learning Points
-<!-- Learning points where you would write what you thought was helpful -->
+
 * Firebase is extremely useful for long-term cloud storage of user data
 * *Additional Learning Points to Come*
 
