@@ -2,6 +2,7 @@ import React, { Component } from 'react';
 
 // Animations
 import Fade from 'react-reveal/Fade';
+import scrollToComponent from 'react-scroll-to-component';
 
 import "./Splash.css";
 
@@ -56,7 +57,7 @@ class Splash extends Component {
             mouseYpercentage: Math.round(this.state.mousey / this.state.windowHeight * 100)
         });
 
-        console.log(this.state.event)
+        // console.log(this.state.event)
 
 
     }
@@ -71,6 +72,8 @@ class Splash extends Component {
                 showBio: true
             });
 
+            this.props.showPortfolio();
+
         }, 2000)
 
 
@@ -78,7 +81,7 @@ class Splash extends Component {
 
     render() {
 
-        console.log(this.state.mouseXpercentage, this.state.mouseYpercentage);
+        // console.log(this.state.mouseXpercentage, this.state.mouseYpercentage);
         return (
             <div>
                 <canvas className="fireworks"></canvas>
@@ -97,7 +100,7 @@ class Splash extends Component {
                     <div className="bio" style={{ display: this.state.showBio ? "block" : "none" }}>
                         <Fade>
                             <p>Hey, I'm Sajeel! I'm a software engineer with a passion for teaching, research, and medicine. Read
-                    more <a href="#" className="bio-links" id="about-link">About Me</a>, see my <a href="#portfolio" className="bio-links"
+                    more <a href="#" className="bio-links" id="about-link">About Me</a>, see my <a onClick={() => scrollToComponent(this.Portfolio, { offset: 0, align: 'top', duration: 1500})} className="bio-links"
                                     id="portfolio-link" >Portfolio</a>, or <a href="#footer" className="bio-links" id="contact-link"
                                     >Contact Me</a>.</p>
                         </Fade>

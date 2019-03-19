@@ -20,6 +20,8 @@ import MDReactComponent from 'markdown-react-js';
 
 // Styling
 import "./Projects.css"
+import Fade from 'react-reveal/Fade';
+import scrollToComponent from 'react-scroll-to-component';
 
 
 const projects = [
@@ -35,7 +37,7 @@ const projects = [
         title: "Dev Lab",
         image: "assets/images/DevLab.png",
         description: "DevLab is a crowd-sourced platform for learning how to code. As developers, we are often bombarded with an overwhelming flood of resources. DevLab seeks to wade through the flood by providing a robust, user-driven tool to pool the best resources!",
-        readme: "assets/READMEs/DevLab.md", 
+        readme: "assets/READMEs/DevLab.md",
         github: "https://github.com/sajeelmalik/Dev-Lab",
         deployed: "http://devlab.herokuapp.com/"
 
@@ -48,7 +50,7 @@ const projects = [
         readme: "assets/READMEs/MtSutro.md",
         github: "https://github.com/sajeelmalik/Mt-Sutro",
         deployed: "https://sutromusic.com"
-    }, 
+    },
     {
         title: "Pet Package",
         image: "assets/images/Pet Package.png",
@@ -59,15 +61,15 @@ const projects = [
     },
     {
         title: "Rap God",
-        image: "assets/images/DevLab.gif",
+        image: "assets/images/RapGod.JPG",
         description: "DevLab is a crowd-sourced platform for learning how to code. As developers, we are often bombarded with an overwhelming flood of resources. DevLab seeks to wade through the flood by providing a robust, user-driven tool to pool the best resources!",
-        readme: "assets/READMEs/MtSutro.md",
+        readme: "assets/READMEs/RapGod.md",
         github: "https://github.com/sajeelmalik/Rap-Trivia",
         deployed: "https://sajeelmalik.github.io/Rap-Trivia/"
     },
     {
         title: "Legend of Zelda RPG",
-        image: "",
+        image: "assets/images/Zelda.png",
         description: "Mt. Sutro Music Company is a platform that allows its associates to grow and excel in the emerging music industry by connecting, engaging, and conducting business in and around the San Francisco music scene.",
         readme: "assets/READMEs/MtSutro.md",
         github: "https://github.com/sajeelmalik/Legend-of-Zelda-RPG",
@@ -116,14 +118,14 @@ class Projects extends Component {
         const readme = require("../../../public/" + text);
 
         fetch(readme)
-        .then(response => {
-          return response.text()
-        })
-        .then(text => {
-          this.setState({
-            readmeText: (text)
-          })
-        })
+            .then(response => {
+                return response.text()
+            })
+            .then(text => {
+                this.setState({
+                    readmeText: (text)
+                })
+            })
 
         this.setState({
             open: true,
@@ -142,27 +144,30 @@ class Projects extends Component {
         let keyCount = 0;
 
         return (
-            <React.Fragment>
+            <div style = {{display: this.props.show}}>
                 <div className="container">
                     <div className="title">
-                        <h1 className="screen" id="portfolio">Portfolio
+                        <h1 className="screen" id="portfolio" ref={(h1) => { this.Portfolio = h1; }}>Portfolio
                 </h1>
                     </div>
                     <div id="featured-project">
                         {/* {console.log(projects.slice(0, 1))} */}
                         <h2 style={{ textAlign: "left" }}>Featured</h2>
-                        {projects.slice(0, 1).map(elem => {
-                            keyCount++;
-                            return <Project key={keyCount} title={elem.title} image={elem.image} description={elem.description} featured={true} github = {elem.github} deployed = {elem.deployed} click={() => this.handleClickOpen(elem.title, elem.readme)} />
-                        })}
+                            {projects.slice(0, 1).map(elem => {
+                                keyCount++;
+                                return <Project key={keyCount} title={elem.title} image={elem.image} description={elem.description} featured={true} github={elem.github} deployed={elem.deployed} click={() => this.handleClickOpen(elem.title, elem.readme)} />
+                            })}
+                        
                     </div>
                     {/* <hr></hr> */}
                     <h3 style={{ textAlign: "left" }}>Selected Projects</h3>
                     <div id="projects">
-                        {projects.slice(1, projects.length).map(elem => {
-                            keyCount++;
-                            return <Project key={keyCount} title={elem.title} image={elem.image} description={elem.description} featured={false} github = {elem.github} deployed = {elem.deployed} click={() => this.handleClickOpen(elem.title, elem.readme)} />
-                        })}
+                        <Fade>
+                            {projects.slice(1, projects.length).map(elem => {
+                                keyCount++;
+                                return <Fade key={keyCount}><Project key={keyCount} title={elem.title} image={elem.image} description={elem.description} featured={false} github={elem.github} deployed={elem.deployed} click={() => this.handleClickOpen(elem.title, elem.readme)} /></Fade>
+                            })}
+                        </Fade> 
                     </div>
 
                 </div>
@@ -185,11 +190,11 @@ class Projects extends Component {
                                 </Button>
                         </Toolbar>
                     </AppBar>
-                    <div className = "container" id = "markdown">
-                        <MDReactComponent  text={this.state.readmeText} />
+                    <div className="container" id="markdown">
+                        <MDReactComponent text={this.state.readmeText} />
                     </div>
                 </Dialog>
-            </React.Fragment>
+            </div>
 
         )
     }

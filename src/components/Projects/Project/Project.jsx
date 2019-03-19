@@ -17,7 +17,6 @@ import IconButton from '@material-ui/core/IconButton';
 
 import ShareIcon from '@material-ui/icons/Share';
 
-
 const styles = {
     card: {
         width: "325px",
@@ -26,7 +25,8 @@ const styles = {
         display: "flex",
         flexDirection: "column",
         justifyContent: "space-between",
-        borderRadius: "10px"
+        borderRadius: "10px",
+        boxShadow: "0px 1px 7px 1.5px rgba(0,0,0,0.2)"
     },
     featuredCard: {
         width: "95%",
@@ -54,39 +54,39 @@ const Project = (props) => {
     const { classes } = props;
 
     return (
-        <Card className={props.featured ? classes.featuredCard : classes.card}>
-            <CardActionArea>
-                <CardMedia
-                    className={classes.media}
-                    image={props.image}
-                    title={props.title}
-                />
-                <CardContent>
-                    <Typography gutterBottom variant="h5" component="h2" className={classes.header}>
-                        {props.title}
-                    </Typography>
-                    <Typography component="p" className={classes.description}>
-                        {props.description}
-                    </Typography>
-                </CardContent>
-            </CardActionArea>
-            <CardActions className={classes.cardActions}>
-                <div>
-                    <IconButton aria-label="Share" color="secondary">
-                        <a target = "_blank" href={props.github}><i className="fab fa-github"></i></a>
-                    </IconButton>
-                    <IconButton aria-label="Share" color="secondary">
-                        <a target = "_blank" href={props.deployed}><ShareIcon /></a>
-                    </IconButton>
-                </div>
-                <div>
-                    <Button size="small" variant="contained" color="primary" onClick={props.click}>
-                        Learn More
+            <Card className={props.featured ? classes.featuredCard : classes.card}>
+                <CardActionArea>
+                    <CardMedia
+                        className={classes.media}
+                        image={props.image}
+                        title={props.title}
+                    />
+                    <CardContent>
+                        <Typography gutterBottom variant="h5" component="h2" className={classes.header}>
+                            {props.title}
+                        </Typography>
+                        <Typography component="p" className={classes.description}>
+                            {props.description}
+                        </Typography>
+                    </CardContent>
+                </CardActionArea>
+                <CardActions className={classes.cardActions}>
+                    <div>
+                        <IconButton aria-label="Share" color="secondary">
+                            <a target="_blank" href={props.github}><i className="fab fa-github"></i></a>
+                        </IconButton>
+                        <IconButton aria-label="Share" color="secondary">
+                            <a target="_blank" href={props.deployed}><ShareIcon /></a>
+                        </IconButton>
+                    </div>
+                    <div>
+                        <Button size="small" variant="contained" color="primary" onClick={props.click}>
+                            Learn More
                         </Button>
-                </div>
+                    </div>
 
-            </CardActions>
-        </Card>
+                </CardActions>
+            </Card>
     );
 }
 

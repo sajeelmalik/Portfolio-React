@@ -216,8 +216,9 @@ Text:
   display: none;
   position: relative;
   font-family: 'Lato', sans-serif;
-  font-size: 1.6em;
+  font-size: 1.5em;
   line-height: 2.3em;
+  letter-spacing: 0.7px;
   margin: 0 40% 0 10%;
   padding-top: 20px;
   transition: 1s ease;
