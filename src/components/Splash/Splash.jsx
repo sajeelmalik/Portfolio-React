@@ -84,14 +84,14 @@ class Splash extends Component {
         // console.log(this.state.mouseXpercentage, this.state.mouseYpercentage);
         return (
             <div>
-                <canvas className="fireworks"></canvas>
+                <canvas className="fireworks" style={{width: this.state.showBio ? "100% !important" : "100% !important"}}></canvas>
                 <div className="introduction" onMouseMove={(event) => this.handleMouseMove(event)}>
                     <div className="radial-gradient" style={{ background: 'radial-gradient(at ' + this.state.mouseXpercentage + '% ' + this.state.mouseYpercentage + '%,  #f5f5f5, #f8f0cd)' }}></div>
                     <div className="title">
 
-                        <h1 className="name" id="sajeel" onClick={this.handleNameClick} style={{ width: this.state.nameClicked ? "80%" : "", textAlign: this.state.nameClicked ? "left" : "" }}>
-                            <Fade top>Sajeel Malik</Fade>
-                        </h1>
+                        <Fade top><h1 className="name" id="sajeel" onClick={this.handleNameClick} style={{ width: this.state.nameClicked ? "80%" : "", textAlign: this.state.nameClicked ? "left" : "" }}>
+                            Sajeel Malik
+                        </h1></Fade>
 
                     </div>
 
@@ -100,7 +100,7 @@ class Splash extends Component {
                     <div className="bio" style={{ display: this.state.showBio ? "block" : "none" }}>
                         <Fade>
                             <p>Hey, I'm Sajeel! I'm a software engineer with a passion for teaching, research, and medicine. Read
-                    more <a href="#" className="bio-links" id="about-link">About Me</a>, see my <a onClick={() => scrollToComponent(this.Portfolio, { offset: 0, align: 'top', duration: 1500})} className="bio-links"
+                    more <a href="#" className="bio-links" id="about-link">About Me</a>, see my <a onClick={() => scrollToComponent(this.Portfolio, { offset: 0, align: 'top', duration: 1500 })} className="bio-links"
                                     id="portfolio-link" >Portfolio</a>, or <a href="#footer" className="bio-links" id="contact-link"
                                     >Contact Me</a>.</p>
                         </Fade>

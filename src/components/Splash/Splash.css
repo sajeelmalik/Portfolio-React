@@ -108,6 +108,7 @@ Text:
   .title h1::selection {
     background: #ffe880; /* WebKit/Blink Browsers */
     text-transform: uppercase;
+    color: white;
   }
   
   .name {

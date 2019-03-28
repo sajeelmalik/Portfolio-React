@@ -147,7 +147,7 @@ class Projects extends Component {
             <div style = {{display: this.props.show}}>
                 <div className="container">
                     <div className="title">
-                        <h1 className="screen" id="portfolio" ref={(h1) => { this.Portfolio = h1; }}>Portfolio
+                        <h1 className="screen" id="portfolio" >Portfolio
                 </h1>
                     </div>
                     <div id="featured-project">

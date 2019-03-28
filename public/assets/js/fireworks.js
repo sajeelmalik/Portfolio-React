@@ -36,7 +36,7 @@ var fireworks = (function() {
     p.x = x;
     p.y = y;
     p.color = colors[anime.random(0, colors.length - 1)];
-    p.radius = anime.random(16, 32);
+    p.radius = anime.random(16, 30);
     p.endPos = setParticuleDirection(p);
     p.draw = function() {
       ctx.beginPath();
@@ -116,10 +116,11 @@ var fireworks = (function() {
     render.play();
     updateCoords(e);
     animateParticules(pointerX, pointerY);
-    ga('send', 'event', 'Fireworks', 'Click');
+    // ga('send', 'event', 'Fireworks', 'Click');
   }, false);
 
-  window.addEventListener('resize', setCanvasSize, false);
+  // window.addEventListener('resize', setCanvasSize, false);
+  setCanvasSize();
 
   return {
     render: render,
