@@ -60,9 +60,17 @@ const projects = [
         deployed: "https://sajeelmalik.github.io/Pet-Package/"
     },
     {
+        title: "MealPal Ratings",
+        image: "assets/images/MPratings.png",
+        description: "Interactively add your favorite Mealpal meals from your favorite restaurants to see which meals are truly worth it! Rate your meals by how they taste and by whether or not their portion size and price is worthwhile; remember, a great tasting meal may not be worth it!",
+        readme: "assets/READMEs/MPratings.md",
+        github: "https://github.com/sajeelmalik/mealpal-ratings",
+        deployed: "https://mealpalratings.herokuapp.com"
+    },
+    {
         title: "Rap God",
         image: "assets/images/RapGod.JPG",
-        description: "DevLab is a crowd-sourced platform for learning how to code. As developers, we are often bombarded with an overwhelming flood of resources. DevLab seeks to wade through the flood by providing a robust, user-driven tool to pool the best resources!",
+        description: "Are you a Rap God? A front-end trivia game leveraging Javascript/jQuery and Bootstrap and unique responsive design.",
         readme: "assets/READMEs/RapGod.md",
         github: "https://github.com/sajeelmalik/Rap-Trivia",
         deployed: "https://sajeelmalik.github.io/Rap-Trivia/"
@@ -74,14 +82,6 @@ const projects = [
         readme: "assets/READMEs/MtSutro.md",
         github: "https://github.com/sajeelmalik/Legend-of-Zelda-RPG",
         deployed: "https://sajeelmalik.github.io/Legend-of-Zelda-RPG/"
-    },
-    {
-        title: "Mt. Sutro",
-        image: "",
-        description: "Mt. Sutro Music Company is a platform that allows its associates to grow and excel in the emerging music industry by connecting, engaging, and conducting business in and around the San Francisco music scene.",
-        readme: "assets/READMEs/MtSutro.md",
-        github: "google.com",
-        deployed: "google.com"
     },
 
 ]
@@ -138,13 +138,24 @@ class Projects extends Component {
         this.setState({ open: false });
     };
 
+    // handleProjectGeneration = () => {
+    //     let keyCount = 1;
+    //     let renderedProjects;
+    //     projects.slice(1, projects.length).map(elem => {
+    //         keyCount++;
+    //         renderedProjects += <Project key={keyCount} title={elem.title} image={elem.image} description={elem.description} featured={false} github={elem.github} deployed={elem.deployed} click={() => this.handleClickOpen(elem.title, elem.readme)} />
+    //     })
+    //     return renderedProjects;
+    // }
+
 
     render() {
         const { classes } = this.props;
-        let keyCount = 0;
+        // let selectedProjects = this.handleProjectGeneration();
+        let keyCount = 0;   
 
         return (
-            <div style = {{display: this.props.show}}>
+            <div style={{ display: this.props.show }}>
                 <div className="container">
                     <div className="title">
                         <h1 className="screen" id="portfolio" >Portfolio
@@ -153,23 +164,22 @@ class Projects extends Component {
                     <div id="featured-project">
                         {/* {console.log(projects.slice(0, 1))} */}
                         <h2 style={{ textAlign: "left" }}>Featured</h2>
-                            {projects.slice(0, 1).map(elem => {
-                                keyCount++;
-                                return <Project key={keyCount} title={elem.title} image={elem.image} description={elem.description} featured={true} github={elem.github} deployed={elem.deployed} click={() => this.handleClickOpen(elem.title, elem.readme)} />
-                            })}
-                        
+                        {projects.slice(0, 1).map(elem => {
+                            keyCount++;
+                            return <Project key={keyCount} title={elem.title} image={elem.image} description={elem.description} featured={true} github={elem.github} deployed={elem.deployed} click={() => this.handleClickOpen(elem.title, elem.readme)} />
+                        })}
+
                     </div>
                     {/* <hr></hr> */}
                     <h3 style={{ textAlign: "left" }}>Selected Projects</h3>
-                    <div id="projects">
-                        <Fade>
+                    {/* <Fade cascade> */}
+                        <div id="projects">
                             {projects.slice(1, projects.length).map(elem => {
                                 keyCount++;
                                 return <Fade key={keyCount}><Project key={keyCount} title={elem.title} image={elem.image} description={elem.description} featured={false} github={elem.github} deployed={elem.deployed} click={() => this.handleClickOpen(elem.title, elem.readme)} /></Fade>
-                            })}
-                        </Fade> 
-                    </div>
-
+                            })} 
+                        </div>
+                    {/* </Fade> */}
                 </div>
                 <Dialog
                     fullScreen

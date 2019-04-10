@@ -99,9 +99,9 @@ class Splash extends Component {
 
                     <div className="bio" style={{ display: this.state.showBio ? "block" : "none" }}>
                         <Fade>
-                            <p>Hey, I'm Sajeel! I'm a software engineer with a passion for teaching, research, and medicine. Read
-                    more <a href="#" className="bio-links" id="about-link">About Me</a>, see my <a onClick={() => scrollToComponent(this.Portfolio, { offset: 0, align: 'top', duration: 1500 })} className="bio-links"
-                                    id="portfolio-link" >Portfolio</a>, or <a href="#footer" className="bio-links" id="contact-link"
+                            <p style={{color: "rgb(91, 90, 104)"}}>Hey, I'm Sajeel! I'm a full-stack software engineer with a passion for teaching, research, and medicine. Read
+                    more <a href="#" className="bio-links" id="about-link">About Me</a>, see my <a onClick={() => this.props.scrollToPortfolio()} className="bio-links"
+                                    id="portfolio-link"  >Portfolio</a> and <a className="bio-links" id="skills-link" onClick={() => this.props.scrollToSkills()}> Stack</a>, or <a className="bio-links" id="contact-link" onClick={() => this.props.scrollToFooter()}
                                     >Contact Me</a>.</p>
                         </Fade>
                     </div>
@@ -111,16 +111,16 @@ class Splash extends Component {
                     {/* <!-- <div id="box-animation"></div> --> */}
                     {/* {this.state.showBio ? <Fade out> : ""} */}
                     <div className={`social-buttons ${this.state.nameClicked ? "fadeOut" : ""}`} style={{ display: this.state.showBio ? "none" : "black" }}><Fade bottom>
-                        <a href="https://www.linkedin.com/in/sajeel-malik-545a838b/">
+                        <a href="https://www.linkedin.com/in/sajeel-malik-545a838b/" target="_blank">
                             <p><i className="fab fa-linkedin fa-3x linkedin-icon"></i></p>
                         </a>
-                        <a href="https://github.com/sajeelmalik">
+                        <a href="https://github.com/sajeelmalik" target="_blank">
                             <p><i className="fab fa-github fa-3x github-icon"></i></p>
                         </a>
-                        <a href="https://www.instagram.com/smak23/">
+                        <a href="https://www.instagram.com/smak23/" target="_blank">
                             <p><i className="fab fa-instagram fa-3x instagram-icon"></i></p>
                         </a>
-                        <a href="https://medium.com/@sajeel23">
+                        <a href="https://medium.com/@sajeel23" target="_blank">
                             <p><i className="fab fa-medium fa-3x  medium-icon"></i></p>
                         </a>
                     </Fade>

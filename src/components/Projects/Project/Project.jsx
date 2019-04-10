@@ -21,6 +21,8 @@ const styles = {
     card: {
         width: "325px",
         maxWidth: 345,
+        height: "500px",
+        // maxheight: 345,
         marginBottom: "40px",
         display: "flex",
         flexDirection: "column",
