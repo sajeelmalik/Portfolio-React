@@ -1,0 +1,31 @@
+#about{
+    width: 100%;
+    margin-bottom: 40px;
+  }
+
+.about-me{
+    display: flex;
+    flex-direction: column;
+    margin-top: 60px;
+}
+
+.pic-container{
+    display: flex;
+    align-self: center;
+    border-radius: 50%;
+    border: 10px solid #FCE575;
+    box-shadow: 0px 1px 4px #FFD447;
+    /* box-shadow: 0px 0px 6px #FCE575; */
+}
+
+.profile-pic{
+    max-height: 250px;
+    max-width: 250px;
+    border-radius: 50%;
+}
+
+.about-me-body{
+    margin: auto;
+    width: 60%;
+
+}

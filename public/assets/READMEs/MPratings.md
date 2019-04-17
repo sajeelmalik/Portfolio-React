@@ -17,7 +17,6 @@ Check out the deployed site here:
 This is a full-stack application, so no need to download anything!
 
 ### Preview 
-<!-- take a picture of the image and add it into the readme  -->
 
 #### Landing Page
 
@@ -53,8 +52,6 @@ This is a full-stack application, so no need to download anything!
 ``` require("path"); ```
 
 # Code Snippets
-<!-- put snippets of code inside ``` ``` so it will look like code -->
-<!-- if you want to put blockquotes use a > -->
 
 Object-relational mapping proved to be a challenging aspect of this project. Though it provided a unique, customizable framework to interact with SQL databased, the web of callback functions that were required demonstrated the technical difficulty of maintaining clean ORMs. Below, the general overlay of the orm is shown. SQL logic is utilized to generate an adaptable, concatenated *querystring*,  and the *cb* refers to a callback function that will be passed one level upwards, at the **meal.js model** (see repository under /models).
 
@@ -163,7 +160,7 @@ Utilizing the JSON - a data structure that presents an array of objects - that w
 ```
 
 # Learning Points
-<!-- Learning points where you would write what you thought was helpful -->
+
 * Express.js is a comprehensive node package that simplifies server functionality
 * Router development through Express.js - while server functionality and execution is simpified, complex routing trees need to be delineated for proper funcitonality
 * Object-relational mapping presented enormous difficulties in the initial stages of development. While its utility is apparent, more advanved technology like Sequelize may expedite the process of creating relational frameworks. Having to utilize multiple callback functions precludes the ability to write clean, readable code.

@@ -99,7 +99,14 @@ const styles = {
         maxWidth: "100%",
         width: "100%",
         overflow: "none"
-    }
+    },
+    section: {
+        backgroundColor: "white",
+        backgroundSize: "cover",
+        backgroundRepeat: "no-repeat",
+        paddingTop: "10%",
+
+    },
 };
 
 function Transition(props) {
@@ -155,9 +162,9 @@ class Projects extends Component {
         let keyCount = 0;   
 
         return (
-            <div style={{ display: this.props.show }}>
+            <div className = {classes.section} style={{ display: this.props.show}}>
                 <div className="container">
-                    <div className="title">
+                    <div className="title" style={{ marginTop: "0" }}>
                         <h1 className="screen" id="portfolio" >Portfolio
                 </h1>
                     </div>
