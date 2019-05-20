@@ -10,6 +10,7 @@ import List from '@material-ui/core/List';
 import ListItem from '@material-ui/core/ListItem';
 import ListItemText from '@material-ui/core/ListItemText';
 import BeachAccessIcon from '@material-ui/icons/BeachAccess';
+import NavPills from "components/NavPills/NavPills.jsx";
 
 
 import ShareIcon from '@material-ui/icons/Share';
