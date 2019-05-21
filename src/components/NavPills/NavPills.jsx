@@ -11,10 +11,10 @@ import Tabs from "@material-ui/core/Tabs";
 import Tab from "@material-ui/core/Tab";
 
 // core components
-import GridContainer from "components/Grid/GridContainer.jsx";
-import GridItem from "components/Grid/GridItem.jsx";
+import GridContainer from "../Grid/GridContainer";
+import GridItem from "../Grid/GridItem.jsx";
 
-import navPillsStyle from "assets/jss/material-kit-react/components/navPillsStyle.jsx";
+import navPillsStyle from "../../assets/jss/material-kit-react/components/navPillsStyle";
 
 class NavPills extends React.Component {
   constructor(props) {
@@ -48,7 +48,8 @@ class NavPills extends React.Component {
           root: classes.root,
           fixed: classes.fixed,
           flexContainer: flexContainerClasses,
-          indicator: classes.displayNone
+          indicator: classes.displayNone,
+          centered: classes.alignCenter
         }}
         value={this.state.active}
         onChange={this.handleChange}

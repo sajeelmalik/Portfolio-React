@@ -5,7 +5,7 @@ import {
   successColor,
   warningColor,
   dangerColor
-} from "assets/jss/material-kit-react.jsx";
+} from "../../material-kit-react";
 
 const navPillsStyle = theme => ({
   root: {
@@ -48,8 +48,8 @@ const navPillsStyle = theme => ({
     borderRadius: "4px"
   },
   tabIcon: {
-    width: "30px",
-    height: "30px",
+    width: "50px",
+    height: "50px",
     display: "block",
     margin: "15px 0"
   },

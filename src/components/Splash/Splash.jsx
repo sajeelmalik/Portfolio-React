@@ -84,7 +84,7 @@ class Splash extends Component {
         // console.log(this.state.mouseXpercentage, this.state.mouseYpercentage);
         return (
             <div>
-                <canvas className="fireworks" style={{width: this.state.showBio ? "100% !important" : "100% !important"}}></canvas>
+                <canvas className="fireworks" width = {"100px"} style={{width: this.state.showBio ? "100% !important" : "100% !important"}}></canvas>
                 <div className="introduction" onMouseMove={(event) => this.handleMouseMove(event)}>
                     <div className="radial-gradient" style={{ background: 'radial-gradient(at ' + this.state.mouseXpercentage + '% ' + this.state.mouseYpercentage + '%,  #f5f5f5, #f8f0cd)' }}></div>
                     <div className="title">

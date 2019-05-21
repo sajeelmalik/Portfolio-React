@@ -48,9 +48,10 @@ class Main extends Component {
             <React.Fragment>
                 <Splash showPortfolio={this.handlePortfolioOpen} scrollToPortfolio={this.handleScrolltoPortfolio} scrollToSkills={this.handleScrolltoSkills} scrollToFooter={this.handleScrolltoFooter}></Splash>
                 <Skills show={this.state.showPortfolio ? "block" : "none"} ref={(section) => { this.Skills = section; }}></Skills>
+                <div id="divider" style={{ display: this.state.showPortfolio ? "block" : "none" }}></div>
                 <Projects show={this.state.showPortfolio ? "block" : "none"} ref={(section) => { this.Portfolio = section; }}></Projects>
                 <About show={this.state.showPortfolio ? "block" : "none"} />
-                <div  id="footer" style={{ display: this.state.showPortfolio ? "block" : "none" }}>
+                <footer id="footer" style={{ display: this.state.showPortfolio ? "block" : "none" }}>
                     <div id="footer-container">
                         <Fade cascade>
                             <div id="footer-content">
@@ -80,8 +81,8 @@ class Main extends Component {
                             
                         </Fade>
                     </div>
-                </div>
-                <div style = {{height: "1px ", backgroundColor: "transparent"}} ref={(section) => { this.Footer = section; }}>a</div>
+                </footer>
+                <div style = {{height: "1px ", backgroundColor: "transparent"}} ref={(section) => { this.Footer = section; }}></div>
             </React.Fragment>
         )
     }

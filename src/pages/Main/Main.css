@@ -1,8 +1,19 @@
+.fireworks{
+    max-width: 100%;
+}
+
+#divider{
+    transform: skew(0deg, -3deg);
+    background: linear-gradient(#A4036F 10%, 40%, #3943B7 100%);
+    width: 100%;
+    height: 40vh;
+}
+
 #footer{
     width: 100%;
     height: 360px;
     background-color: #000022;
-    position: fixed;
+    /* position: fixed; */
     bottom: 0;
     z-index: -2;
 }

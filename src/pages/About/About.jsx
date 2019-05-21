@@ -18,7 +18,7 @@ const styles = (theme) => ({
         // paddingBottom: "5%",
         // transform: "skew(0deg, 5deg)",
         marginBottom: "360px",
-        zIndex: "2",
+        zIndex: "-2",
         paddingTop: "10%",
         paddingBottom: "5%",
 
