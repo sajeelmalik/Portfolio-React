@@ -84,7 +84,7 @@ class Splash extends Component {
         // console.log(this.state.mouseXpercentage, this.state.mouseYpercentage);
         return (
             <div>
-                <canvas className="fireworks" width = {"100px"} style={{width: this.state.showBio ? "100% !important" : "100% !important"}}></canvas>
+                <canvas className="fireworks" width = {"100%"} style={{width: this.state.showBio ? "100% !important" : "100% !important"}}></canvas>
                 <div className="introduction" onMouseMove={(event) => this.handleMouseMove(event)}>
                     <div className="radial-gradient" style={{ background: 'radial-gradient(at ' + this.state.mouseXpercentage + '% ' + this.state.mouseYpercentage + '%,  #f5f5f5, #f8f0cd)' }}></div>
                     <div className="title">
@@ -100,7 +100,7 @@ class Splash extends Component {
                     <div className="bio" style={{ display: this.state.showBio ? "block" : "none" }}>
                         <Fade>
                             <p style={{color: "rgb(91, 90, 104)"}}>Hey, I'm Sajeel! I'm a full-stack software engineer with a passion for teaching, research, and medicine. Read
-                    more <a href="#" className="bio-links" id="about-link">About Me</a>, see my <a onClick={() => this.props.scrollToPortfolio()} className="bio-links"
+                    more <a onClick={()=>this.props.scrollToAbout()} className="bio-links" id="about-link">About Me</a>, see my <a onClick={() => this.props.scrollToPortfolio()} className="bio-links"
                                     id="portfolio-link"  >Portfolio</a> and <a className="bio-links" id="skills-link" onClick={() => this.props.scrollToSkills()}> Stack</a>, or <a className="bio-links" id="contact-link" onClick={() => this.props.scrollToFooter()}
                                     >Contact Me</a>.</p>
                         </Fade>

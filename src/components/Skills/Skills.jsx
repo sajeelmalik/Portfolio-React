@@ -15,6 +15,10 @@ import GridContainer from "../Grid/GridContainer.jsx";
 import ShareIcon from "@material-ui/icons/Share";
 import ImageIcon from "@material-ui/icons/Image";
 import WorkIcon from "@material-ui/icons/Work";
+import LaptopIcon from "@material-ui/icons/LaptopTwoTone";
+import CloudIcon from "@material-ui/icons/Cloud";
+import DevBoard from "@material-ui/icons/DeveloperBoardTwoTone";
+import Reorder from "@material-ui/icons/Reorder";
 
 // Styling
 import "./Skills.css";
@@ -22,7 +26,7 @@ import Fade from "react-reveal/Fade";
 
 const styles = theme => ({
   root: {
-    width:"95%",
+    width: "95%",
     // maxWidth: 360,
     margin: "10px auto",
     backgroundColor: theme.palette.background.paper,
@@ -42,7 +46,7 @@ const styles = theme => ({
     margin: "0 30px 10px 30px",
     borderRadius: "15px",
     borderTop: "rgb(172, 82, 142) solid 10px",
-    boxShadow: "0px 1px 4px 2px rgba(0,0,0,0.2)",
+    boxShadow: "0px 1px 4px 2px rgba(0,0,0,0.2)"
     // width: "600px"
 
     // "&::before": {
@@ -109,7 +113,7 @@ const Skills = props => {
               tabs={[
                 {
                   tabButton: "Front-End",
-                  tabIcon: () => <i class="fas fa-laptop" />,
+                  tabIcon: LaptopIcon,
                   tabContent: (
                     <Paper className={classes.paper} data-text="frontend">
                       <List className={classes.root}>
@@ -197,7 +201,7 @@ const Skills = props => {
                 },
                 {
                   tabButton: "Back-End",
-                  tabIcon: () => <i class="fas fa-server" />,
+                  tabIcon: Reorder,
                   tabContent: (
                     <Paper className={classes.paper}>
                       <List className={classes.root}>
@@ -276,7 +280,7 @@ const Skills = props => {
                           </div>
                           <ListItemText
                             primary="Mongooose"
-                            secondary="Schema-based ORM for Mongo"
+                            secondary="Schema-based ODM for Mongo"
                           />
                         </ListItem>
                         <ListItem button className={classes.listItem}>
@@ -310,8 +314,219 @@ const Skills = props => {
                   )
                 },
                 {
-                  tabButton: "Frameworks",
-                  tabContent: "test"
+                  tabButton: "Additional Frameworks",
+                  tabIcon: DevBoard,
+                  tabContent: (
+                    <Paper className={classes.paper} data-text="Frameworks">
+                      <List className={classes.root}>
+                        <ListItem button className={classes.listItem}>
+                          <div className={classes.avatar}>
+                            <img
+                              className={classes.skillIcon}
+                              src="data:image/jpeg;base64,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"
+                              alt="Python"
+                            />
+                          </div>
+                          <ListItemText
+                            primary="Python"
+                            secondary="High-level, general purpose programming language. Versions 2.7 - 3.7"
+                          />
+                        </ListItem>
+                        <ListItem button className={classes.listItem}>
+                          <div className={classes.avatar}>
+                            <img
+                              className={classes.skillIcon}
+                              src="https://banner2.kisspng.com/20180508/qyw/kisspng-flask-python-web-framework-web-application-tutoria-5af1dbb70b6430.1030595115257998630467.jpg"
+                              alt="Flask"
+                            />
+                          </div>
+                          <ListItemText
+                            primary="Flask"
+                            secondary="Minimalistic Python Microframework"
+                          />
+                        </ListItem>
+                        <ListItem button className={classes.listItem}>
+                          <div className={classes.avatar}>
+                            <img
+                              className={classes.skillIcon}
+                              src="https://cdn.freebiesupply.com/logos/thumbs/2x/django-community-logo.png"
+                              alt="Django"
+                            />
+                          </div>
+                          <ListItemText
+                            primary="Django"
+                            secondary="Robust, opinionated MVT framework"
+                          />
+                        </ListItem>
+                        <ListItem button className={classes.listItem}>
+                          <div className={classes.avatar}>
+                            <img
+                              className={classes.skillIcon}
+                              src="https://s.wol.ph/wp-content/uploads/2014/01/jinja2.png"
+                              alt="Jinja"
+                            />
+                          </div>
+                          <ListItemText
+                            primary="Jinja"
+                            secondary="Python-based backend view templating"
+                          />
+                        </ListItem>
+                        <ListItem button className={classes.listItem}>
+                          <div className={classes.avatar}>
+                            <img
+                              className={classes.skillIcon}
+                              src="data:image/png;base64,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"
+                              alt="Material Design"
+                            />
+                          </div>
+                          <ListItemText
+                            primary="Material Design"
+                            secondary="Google Design Principles - Material UI (React), Materialize.css"
+                          />
+                        </ListItem>
+                        <ListItem button className={classes.listItem}>
+                          <div className={classes.avatar}>
+                            <img
+                              className={classes.skillIcon}
+                              src="https://www.pinclipart.com/picdir/middle/35-353932_bootstrap-bootstrap-4-logo-png-clipart.png"
+                              alt="Bootstrap"
+                            />
+                          </div>
+                          <ListItemText
+                            primary="Bootstrap"
+                            secondary="Open-source CSS Framework designed by Twitter"
+                          />
+                        </ListItem>
+                      </List>
+                    </Paper>
+                  )
+                },
+                {
+                  tabButton: "Cloud and Compilers",
+                  tabIcon: CloudIcon,
+                  tabContent: (
+                    <Paper className={classes.paper} data-text="Frameworks">
+                      <List className={classes.root}>
+                        <ListItem button className={classes.listItem}>
+                          <div className={classes.avatar}>
+                            <img
+                              className={classes.skillIcon}
+                              src="https://www.gend.co/hs-fs/hubfs/gcp-logo-cloud.png?width=730&name=gcp-logo-cloud.png"
+                              alt="Google Cloud Platform"
+                            />
+                          </div>
+                          <ListItemText
+                            primary="Google Cloud Platform"
+                            secondary="Suite of Google cloud computing services; proficient in App Engine, Datastore, Cloud SQL, etc."
+                          />
+                        </ListItem>
+                        <ListItem button className={classes.listItem}>
+                          <div className={classes.avatar}>
+                            <img
+                              className={classes.skillIcon}
+                              src="data:image/png;base64,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"
+                              alt="Amazon Web Services (AWS)"
+                            />
+                          </div>
+                          <ListItemText
+                            primary="Amazon Web Services (AWS)"
+                            secondary="Cloud Computing provided by Amazon; proficient in Lambda and S3, as well as Alexa"
+                          />
+                        </ListItem>
+                        <ListItem button className={classes.listItem}>
+                          <div className={classes.avatar}>
+                            <img
+                              className={classes.skillIcon}
+                              src="https://img.icons8.com/color/420/firebase.png"
+                              alt="Firebase"
+                            />
+                          </div>
+                          <ListItemText
+                            primary="Firebase"
+                            secondary="Real-time Cloud Database"
+                          />
+                        </ListItem>
+                        <ListItem button className={classes.listItem}>
+                          <div className={classes.avatar}>
+                            <img
+                              className={classes.skillIcon}
+                              src="https://img.icons8.com/color/420/heroku.png"
+                              alt="Heroku"
+                            />
+                          </div>
+                          <ListItemText
+                            primary="Heroku"
+                            secondary="Cloud PaaS supporting several programming languages. Full-stack Node.js deployments"
+                          />
+                        </ListItem>
+                        <ListItem button className={classes.listItem}>
+                          <div className={classes.avatar}>
+                            <img
+                              className={classes.skillIcon}
+                              src="data:image/png;base64,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"
+                              alt="Git"
+                            />
+                          </div>
+                          <ListItemText
+                            primary="Git"
+                            secondary=""
+                          />
+                        </ListItem>
+                        <ListItem button className={classes.listItem}>
+                          <div className={classes.avatar}>
+                            <img
+                              className={classes.skillIcon}
+                              src=""
+                              alt="NPM (Node Package Manager)"
+                            />
+                          </div>
+                          <ListItemText
+                            primary="NPM (Node Package Manager)"
+                            secondary=""
+                          />
+                        </ListItem>
+                        <ListItem button className={classes.listItem}>
+                          <div className={classes.avatar}>
+                            <img
+                              className={classes.skillIcon}
+                              src=""
+                              alt="Yarn"
+                            />
+                          </div>
+                          <ListItemText
+                            primary="Yarn"
+                            secondary=""
+                          />
+                        </ListItem>
+                        <ListItem button className={classes.listItem}>
+                          <div className={classes.avatar}>
+                            <img
+                              className={classes.skillIcon}
+                              src=""
+                              alt="Pip"
+                            />
+                          </div>
+                          <ListItemText
+                            primary="Pip"
+                            secondary=""
+                          />
+                        </ListItem>
+                        <ListItem button className={classes.listItem}>
+                          <div className={classes.avatar}>
+                            <img
+                              className={classes.skillIcon}
+                              src=""
+                              alt="Anaconda"
+                            />
+                          </div>
+                          <ListItemText
+                            primary="Anaconda"
+                            secondary=""
+                          />
+                        </ListItem>
+                      </List>
+                    </Paper>
+                  )
                 }
               ]}
             />

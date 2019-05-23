@@ -104,7 +104,7 @@ const styles = {
         backgroundColor: "white",
         backgroundSize: "cover",
         backgroundRepeat: "no-repeat",
-        paddingTop: "10%",
+        padding: "10% 0 5% 0",
 
     },
 };

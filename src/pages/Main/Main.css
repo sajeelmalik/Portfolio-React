@@ -16,11 +16,14 @@
     /* position: fixed; */
     bottom: 0;
     z-index: -2;
+
+    align-items: center;
 }
 
 #footer-container{
     width: 60%;
     margin: 30px auto;
+    padding-bottom: 25px;
 }
 
 #footer-content{

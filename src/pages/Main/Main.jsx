@@ -41,17 +41,21 @@ class Main extends Component {
         scrollToComponent(this.Footer, { offset: 0, align: 'top', duration: 1500 })
     }
 
+    handleScrolltoAbout = () => {
+        scrollToComponent(this.About, { offset: 0, align: 'top', duration: 1500 })
+    }
+
     render() {
 
         console.log("showPortfolio", this.state.showPortfolio)
         return (
             <React.Fragment>
-                <Splash showPortfolio={this.handlePortfolioOpen} scrollToPortfolio={this.handleScrolltoPortfolio} scrollToSkills={this.handleScrolltoSkills} scrollToFooter={this.handleScrolltoFooter}></Splash>
+                <Splash showPortfolio={this.handlePortfolioOpen} scrollToPortfolio={this.handleScrolltoPortfolio} scrollToSkills={this.handleScrolltoSkills} scrollToAbout={this.handleScrolltoAbout} scrollToFooter={this.handleScrolltoFooter}></Splash>
                 <Skills show={this.state.showPortfolio ? "block" : "none"} ref={(section) => { this.Skills = section; }}></Skills>
                 <div id="divider" style={{ display: this.state.showPortfolio ? "block" : "none" }}></div>
                 <Projects show={this.state.showPortfolio ? "block" : "none"} ref={(section) => { this.Portfolio = section; }}></Projects>
-                <About show={this.state.showPortfolio ? "block" : "none"} />
-                <footer id="footer" style={{ display: this.state.showPortfolio ? "block" : "none" }}>
+                <About show={this.state.showPortfolio ? "block" : "none"} ref={(section) => { this.About = section; }} />
+                <footer id="footer" style={{ display: this.state.showPortfolio ? "flex" : "none" }}>
                     <div id="footer-container">
                         <Fade cascade>
                             <div id="footer-content">
