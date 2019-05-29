@@ -15,3 +15,27 @@ code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, "Courier New",
     monospace;
 }
+
+/* Media Queries */
+
+@media only screen and (max-width: 768px){
+  .title{
+    margin-top: 50%;
+  }
+  #sajeel{
+    width: 40%;
+  }
+
+  .about-me-body{
+    width: 80%;
+  }
+
+}
+
+@media only screen and (max-width: 430px){
+
+  #sajeel{
+    width: 90%;
+  }
+
+}
