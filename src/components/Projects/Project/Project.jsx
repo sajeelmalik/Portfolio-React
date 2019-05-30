@@ -75,10 +75,10 @@ const Project = (props) => {
                 <CardActions className={classes.cardActions}>
                     <div>
                         <IconButton aria-label="Share" color="secondary">
-                            <a target="_blank" href={props.github}><i className="fab fa-github"></i></a>
+                            <a target="_blank" rel="noopener noreferrer" href={props.github}><i className="fab fa-github"></i></a>
                         </IconButton>
                         <IconButton aria-label="Share" color="secondary">
-                            <a target="_blank" href={props.deployed}><ShareIcon /></a>
+                            <a target="_blank" rel="noopener noreferrer" href={props.deployed}><ShareIcon /></a>
                         </IconButton>
                     </div>
                     <div>

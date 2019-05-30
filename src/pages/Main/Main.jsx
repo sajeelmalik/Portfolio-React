@@ -59,19 +59,19 @@ class Main extends Component {
                     <div id="footer-container">
                         <Fade cascade>
                             <div id="footer-content">
-                                <img id="footer-logo" src="assets/images/SM.png"></img>
+                                <img id="footer-logo" src="assets/images/SM.png" alt="SM Logo"></img>
                                 <h2 style={{ color: "rgb(220, 250, 236)", marginTop: "0" }}>Let's Chat</h2>
                                 <div className="footer-social-buttons">
-                                    <a target="_blank" href="https://www.linkedin.com/in/sajeel-malik-545a838b/">
+                                    <a target="_blank" rel="noopener noreferrer" href="https://www.linkedin.com/in/sajeel-malik-545a838b/">
                                         <p className="footer-contact"><i className="fab fa-linkedin fa-3x footer-icons"></i></p>
                                     </a>
-                                    <a target="_blank" href="https://github.com/sajeelmalik">
+                                    <a target="_blank" rel="noopener noreferrer" href="https://github.com/sajeelmalik">
                                         <p className="footer-contact"><i className="fab fa-github fa-3x footer-icons"></i></p>
                                     </a>
-                                    <a target="_blank" href="https://www.instagram.com/smak23/">
+                                    <a target="_blank" rel="noopener noreferrer" href="https://www.instagram.com/smak23/">
                                         <p className="footer-contact"><i className="fab fa-instagram fa-3x footer-icons"></i></p>
                                     </a>
-                                    <a target="_blank" href="https://medium.com/@sajeel23">
+                                    <a target="_blank" rel="noopener noreferrer" href="https://medium.com/@sajeel23">
                                         <p className="footer-contact"><i className="fab fa-medium fa-3x footer-icons"></i></p>
                                     </a>
 

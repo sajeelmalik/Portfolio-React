@@ -3,9 +3,13 @@
   margin: auto;
 }
 
-canvas{
-    max-width: 100vw;
-    max-height: 100vh;
+canvas {
+  max-width: 100vw;
+  max-height: 100vh;
+}
+
+img{
+    max-width: 100%;
 }
 
 /* Media Queries */
@@ -23,8 +27,12 @@ canvas{
   .about-me-body {
     width: 80%;
   }
-  #footer-logo{
-      width: 30%;
+  .about-me-text{
+    text-align: left;
+
+  }
+  #footer-logo {
+    width: 30%;
   }
 }
 
@@ -35,44 +43,49 @@ canvas{
   #sajeel {
     width: 90%;
   }
+  #loading {
+    margin-top: 80px;
+  }
   .social-buttons {
     width: 31%;
     flex-wrap: wrap;
   }
-  .bio{
+  .bio {
     font-size: 1.2em;
-    line-height: 2.0em;
+    line-height: 2em;
     margin-right: 20%;
-}
+  }
   .about-me-body {
     width: 90%;
   }
-  .about-me-text{
-      font-size: 1.1em;
+  .about-me-text {
+    font-size: 1.1em;
   }
   .title h1 {
     font-size: 60px;
   }
-  #footer-logo{
+  #footer-logo {
     width: 45%;
-}
+  }
 }
 
-@media only screen and (max-width: 375px) {
-    .title {
-      margin-top: 60%;
-    }
-    #sajeel {
-      width: 95%;
-    }
-    .social-buttons {
-        margin-top: 10px;
-      width: 34%;
-      flex-wrap: wrap;
-    }
-  
-    .title h1 {
-      font-size: 58px;
-    }
+@media only screen and (max-width: 376px) {
+  .title {
+    margin-top: 60%;
   }
-  
+  #sajeel {
+    width: 95%;
+  }
+  #loading {
+    margin-top: 40px;
+  }
+  .social-buttons {
+    margin-top: 10px;
+    width: 34%;
+    flex-wrap: wrap;
+  }
+
+  .title h1 {
+    font-size: 54px;
+  }
+}

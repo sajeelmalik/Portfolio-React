@@ -2,8 +2,8 @@ import React, { Component } from 'react';
 
 // Animations
 import Fade from 'react-reveal/Fade';
-import scrollToComponent from 'react-scroll-to-component';
 
+// Styles
 import "./Splash.css";
 
 
@@ -57,8 +57,6 @@ class Splash extends Component {
             mouseYpercentage: Math.round(this.state.mousey / this.state.windowHeight * 100)
         });
 
-        // console.log(this.state.event)
-
 
     }
 
@@ -111,16 +109,16 @@ class Splash extends Component {
                     {/* <!-- <div id="box-animation"></div> --> */}
                     {/* {this.state.showBio ? <Fade out> : ""} */}
                     <div className={`social-buttons ${this.state.nameClicked ? "fadeOut" : ""}`} style={{ display: this.state.showBio ? "none" : "black" }}><Fade bottom>
-                        <a href="https://www.linkedin.com/in/sajeel-malik-545a838b/" target="_blank">
+                        <a href="https://www.linkedin.com/in/sajeel-malik-545a838b/" target="_blank" rel="noopener noreferrer">
                             <p><i className="fab fa-linkedin fa-3x linkedin-icon"></i></p>
                         </a>
-                        <a href="https://github.com/sajeelmalik" target="_blank">
+                        <a href="https://github.com/sajeelmalik" target="_blank" rel="noopener noreferrer">
                             <p><i className="fab fa-github fa-3x github-icon"></i></p>
                         </a>
-                        <a href="https://www.instagram.com/smak23/" target="_blank">
+                        <a href="https://www.instagram.com/smak23/" target="_blank" rel="noopener noreferrer">
                             <p><i className="fab fa-instagram fa-3x instagram-icon"></i></p>
                         </a>
-                        <a href="https://medium.com/@sajeel23" target="_blank">
+                        <a href="https://medium.com/@sajeel23" target="_blank" rel="noopener noreferrer">
                             <p><i className="fab fa-medium fa-3x  medium-icon"></i></p>
                         </a>
                     </Fade>

@@ -21,8 +21,6 @@ import MDReactComponent from 'markdown-react-js';
 // Styling
 import "./Projects.css"
 import Fade from 'react-reveal/Fade';
-import scrollToComponent from 'react-scroll-to-component';
-
 
 const projects = [
     {

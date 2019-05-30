@@ -8,13 +8,9 @@ import Paper from "@material-ui/core/Paper";
 import List from "@material-ui/core/List";
 import ListItem from "@material-ui/core/ListItem";
 import ListItemText from "@material-ui/core/ListItemText";
-import BeachAccessIcon from "@material-ui/icons/BeachAccess";
 import NavPills from "../NavPills/NavPills";
 
 import GridContainer from "../Grid/GridContainer.jsx";
-import ShareIcon from "@material-ui/icons/Share";
-import ImageIcon from "@material-ui/icons/Image";
-import WorkIcon from "@material-ui/icons/Work";
 import LaptopIcon from "@material-ui/icons/LaptopTwoTone";
 import CloudIcon from "@material-ui/icons/Cloud";
 import DevBoard from "@material-ui/icons/DeveloperBoardTwoTone";
@@ -69,7 +65,8 @@ const styles = theme => ({
     display: "flex",
     justifyContent: "center",
     flexDirection: "row",
-    marginTop: "80px"
+    marginTop: "80px",
+    maxWidth: "100vw"
   },
   skillIcon: {
     height: "100%",

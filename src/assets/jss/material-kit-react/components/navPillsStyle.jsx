@@ -12,12 +12,14 @@ const navPillsStyle = theme => ({
     marginTop: "20px",
     paddingLeft: "0",
     marginBottom: "0",
-    overflow: "visible !important"
+    overflow: "visible !important",
+    // maxWidth: "100vw"
   },
   flexContainer: {
     [theme.breakpoints.down("xs")]: {
       display: "flex",
-      flexWrap: "wrap"
+      flexWrap: "wrap",
+      // maxWidth: "100vw"
     }
   },
   displayNone: {
