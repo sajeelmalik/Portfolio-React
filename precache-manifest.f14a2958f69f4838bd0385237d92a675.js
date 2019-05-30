@@ -4,16 +4,16 @@ self.__precacheManifest = [
     "url": "/static/media/Liri Spotify.bf9e9759.PNG"
   },
   {
-    "revision": "03cd97707790aec9ad53",
-    "url": "/static/css/main.7135f960.chunk.css"
+    "revision": "83ca22f4266d2ac6c233",
+    "url": "/static/css/main.ae1d4e43.chunk.css"
   },
   {
     "revision": "42ac5946195a7306e2a5",
     "url": "/static/js/runtime~main.42ac5946.js"
   },
   {
-    "revision": "a0778ab5a6b36d904ed7",
-    "url": "/static/js/2.a0778ab5.chunk.js"
+    "revision": "c50073fa39a3aa7e471e",
+    "url": "/static/js/2.c50073fa.chunk.js"
   },
   {
     "revision": "ec1421e138a35d6e3c9c2ac92c20fbed",
@@ -56,8 +56,8 @@ self.__precacheManifest = [
     "url": "/static/media/Head.8951c01c.jpg"
   },
   {
-    "revision": "03cd97707790aec9ad53",
-    "url": "/static/js/main.03cd9770.chunk.js"
+    "revision": "83ca22f4266d2ac6c233",
+    "url": "/static/js/main.83ca22f4.chunk.js"
   },
   {
     "revision": "079095724217e0c8d7edae741c1b0325",
@@ -112,7 +112,7 @@ self.__precacheManifest = [
     "url": "/static/media/favicon.c92b85a5.ico"
   },
   {
-    "revision": "d2003bc10f288a5f7f76e69b3e3a5009",
+    "revision": "1ca0f58bb6a4a96792ac648df0c54d17",
     "url": "/index.html"
   }
 ];
