@@ -41,6 +41,11 @@ const styles = {
     },
     media: {
         height: 240,
+        transition: "0.4s ease-in",
+        overflow: "hidden",
+        "&:hover": {
+            transform: "scale(1.05)"
+        }
     },
     header: {
         fontFamily: 'Oswald, sans-serif'

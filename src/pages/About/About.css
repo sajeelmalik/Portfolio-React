@@ -11,6 +11,7 @@
 }
 
 .pic-container {
+  position: relative;
   display: flex;
   align-self: center;
   border-radius: 50%;
@@ -23,6 +24,72 @@
   max-height: 250px;
   max-width: 250px;
   border-radius: 50%;
+  transition: 0.2s ease;
+}
+
+.profile-pic-overlay{
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  background: #fce99591;
+  color: white;
+  font-weight: bold;
+  visibility: hidden;
+  opacity: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 100;
+  transition: 0.2s ease;
+  height: 100%;
+  width: 100%;
+  border-radius: 50%;
+}
+
+.pic-container:hover .profile-pic-overlay{
+  visibility: visible;
+  opacity: 1;     
+  text-decoration: none;
+}
+
+.pic-container:hover .profile-pic{
+  opacity: 0.65;     
+}
+
+.play-button{
+  transition: 0.2s ease;
+  transform: translateY(1em);
+  /* color: white; */
+}
+
+.pic-container:hover .play-button{
+  transition: 0.2s ease;
+  transform: translateY(0); 
+  cursor: pointer;
+}
+
+
+.play-icon{
+  font-size: 9em !important;
+  opacity: 0.75;
+  transition: 0.2s ease-in-out;
+}
+
+.play-icon:active{
+  transform: scale(1.1)
+}
+
+.fab-play {
+  display: flex;
+  position: fixed !important;
+  z-index: 200;
+  bottom: 30px;
+  right: 30px;
+  -webkit-animation-name: slideInUp;
+  animation-name: slideInUp;
+  animation-duration: 0.3s;
 }
 
 .about-me-body {
@@ -106,4 +173,17 @@
   background: rgb(233, 74, 74);
   transition: height 0.4s cubic-bezier(0.29, 0.18, 0.26, 0.83);
   background: rgb(233, 74, 74);
+}
+
+@keyframes slideInUp {
+  from {
+    -webkit-transform: translate3d(0, 100%, 0);
+    transform: translate3d(0, 100%, 0);
+    visibility: visible;
+  }
+
+  to {
+    -webkit-transform: translate3d(0, 0, 0);
+    transform: translate3d(0, 0, 0);
+  }
 }

@@ -12,6 +12,10 @@ img{
     max-width: 100%;
 }
 
+.hidden{
+  display: none !important;
+}
+
 /* Media Queries */
 
 @media only screen and (max-width: 768px) {
@@ -66,6 +70,9 @@ img{
   }
   #footer-logo {
     width: 45%;
+  }
+  #copyright p {
+    font-size: 0.85em;
   }
 }
 

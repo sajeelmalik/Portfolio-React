@@ -50,6 +50,14 @@ const projects = [
         deployed: "https://sutromusic.com"
     },
     {
+        title: "Finesse",
+        image: "assets/images/Finesse.png",
+        description: "Finesse is a full-stack application that allows you to scrape the most recent clothing sale items from your favorite brands at affordable prices, comment and write notes on the best products, and store them within your collection!",
+        readme: "assets/READMEs/Finesse.md",
+        github: "https://github.com/sajeelmalik/Finesse",
+        deployed: "https://finessed.herokuapp.com"
+    },
+    {
         title: "Pet Package",
         image: "assets/images/Pet Package.png",
         description: "Pet Package is an API-driven platform that allows pet-seekers to search and contact local humane societies and adoption clinics by offering geographic references!",
@@ -72,15 +80,7 @@ const projects = [
         readme: "assets/READMEs/RapGod.md",
         github: "https://github.com/sajeelmalik/Rap-Trivia",
         deployed: "https://sajeelmalik.github.io/Rap-Trivia/"
-    },
-    {
-        title: "Legend of Zelda RPG",
-        image: "assets/images/Zelda.png",
-        description: "Mt. Sutro Music Company is a platform that allows its associates to grow and excel in the emerging music industry by connecting, engaging, and conducting business in and around the San Francisco music scene.",
-        readme: "assets/READMEs/MtSutro.md",
-        github: "https://github.com/sajeelmalik/Legend-of-Zelda-RPG",
-        deployed: "https://sajeelmalik.github.io/Legend-of-Zelda-RPG/"
-    },
+    }
 
 ]
 

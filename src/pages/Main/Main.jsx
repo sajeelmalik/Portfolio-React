@@ -86,6 +86,7 @@ class Main extends Component {
                         </Fade>
                     </div>
                 </footer>
+                <div id="copyright" style={{ display: this.state.showPortfolio ? "flex" : "none" }}><p>Developed in San Francisco. Copyright © 2019. Sajeel Malik.</p></div>
                 <div style = {{height: "1px ", backgroundColor: "transparent"}} ref={(section) => { this.Footer = section; }}></div>
             </React.Fragment>
         )

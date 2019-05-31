@@ -97,9 +97,9 @@ class Splash extends Component {
 
                     <div className="bio" style={{ display: this.state.showBio ? "block" : "none" }}>
                         <Fade>
-                            <p style={{color: "rgb(91, 90, 104)"}}>Hey, I'm Sajeel! I'm a full-stack software engineer with a passion for teaching, research, and medicine. Read
-                    more <a onClick={()=>this.props.scrollToAbout()} className="bio-links" id="about-link">About Me</a>, see my <a onClick={() => this.props.scrollToPortfolio()} className="bio-links"
-                                    id="portfolio-link"  >Portfolio</a> and <a className="bio-links" id="skills-link" onClick={() => this.props.scrollToSkills()}> Stack</a>, or <a className="bio-links" id="contact-link" onClick={() => this.props.scrollToFooter()}
+                            <p style={{color: "rgb(91, 90, 104)"}}>Hey, I'm Sajeel! I'm a full-stack software engineer with a passion for teaching, research, and medicine. Feel free to check out my <a className="bio-links" id="skills-link" onClick={() => this.props.scrollToSkills()}> Stack</a> and <a onClick={() => this.props.scrollToPortfolio()} className="bio-links"
+                                    id="portfolio-link"  >Portfolio</a>, read
+                    more <a     onClick={()=>this.props.scrollToAbout()} className="bio-links" id="about-link">About Me</a>, or <a className="bio-links" id="contact-link" onClick={() => this.props.scrollToFooter()}
                                     >Contact Me</a>.</p>
                         </Fade>
                     </div>
