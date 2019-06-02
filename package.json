@@ -10,6 +10,7 @@
     "classnames": "2.2.6",
     "gh-pages": "^2.0.1",
     "markdown-react-js": "^1.0.2",
+    "npm": "^6.9.0",
     "prop-types": "15.7.1",
     "react": "^16.8.1",
     "react-dom": "^16.8.1",

@@ -18,6 +18,20 @@ img{
 
 /* Media Queries */
 
+@media only screen and (max-width: 1440px){
+  
+  #featured-title {
+    margin-right: 0px;
+    margin-bottom: 5px;
+    writing-mode: horizontal-tb;
+    width: 100%;
+    transform: rotate(0);
+    text-align: center;
+    font-size: 2.5em;
+    padding: 10px 0 10px 0;
+  }
+}
+
 @media only screen and (max-width: 768px) {
   .title {
     margin-top: 50%;

@@ -25,6 +25,27 @@
     
   }
 
+.skills-header{
+  display: inline-block;
+
+  background: linear-gradient(rgb(172, 82, 142) 50%, 70%, rgb(199, 120, 173) 100%);
+  /* background: rgb(172, 82, 142); */
+  color: white;
+  border-bottom-left-radius: 5px;
+  border-bottom-right-radius: 5px;
+  margin: 0;
+  padding: 5px;
+  text-align: center;
+
+
+
+  position: relative;
+  left: 20px;
+  width: auto;
+  z-index: 100;
+
+}
+
 .NavPills-pills-13{
   margin-left: 0 !important;
 }

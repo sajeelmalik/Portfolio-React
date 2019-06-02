@@ -168,10 +168,12 @@ class Projects extends Component {
                     </div>
                     <div id="featured-project">
                         {/* {console.log(projects.slice(0, 1))} */}
-                        <h2 style={{ textAlign: "left" }}>Featured</h2>
+                        <h2 id="featured-title">
+                            Featured
+                        </h2>
                         {projects.slice(0, 1).map(elem => {
                             keyCount++;
-                            return <Project key={keyCount} title={elem.title} image={elem.image} description={elem.description} featured={true} github={elem.github} deployed={elem.deployed} click={() => this.handleClickOpen(elem.title, elem.readme)} />
+                            return <Fade bottom><Project key={keyCount} title={elem.title} image={elem.image} description={elem.description} featured={true} github={elem.github} deployed={elem.deployed} click={() => this.handleClickOpen(elem.title, elem.readme)}/></Fade>
                         })}
 
                     </div>
@@ -181,7 +183,7 @@ class Projects extends Component {
                         <div id="projects">
                             {projects.slice(1, projects.length).map(elem => {
                                 keyCount++;
-                                return <Fade key={keyCount}><Project key={keyCount} title={elem.title} image={elem.image} description={elem.description} featured={false} github={elem.github} deployed={elem.deployed} click={() => this.handleClickOpen(elem.title, elem.readme)} /></Fade>
+                                return <Fade bottom key={keyCount}><Project key={keyCount} title={elem.title} image={elem.image} description={elem.description} featured={false} github={elem.github} deployed={elem.deployed} click={() => this.handleClickOpen(elem.title, elem.readme)} /></Fade>
                             })} 
                         </div>
                     {/* </Fade> */}

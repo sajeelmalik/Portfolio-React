@@ -47,6 +47,16 @@
     align-items: center;
 }
 
+
+.footer-social-buttons > a{
+    transition: 0.1s ease-in-out;
+}
+
+
+.footer-social-buttons > a:hover {
+    transform: translateY(-2px);
+}
+
 .footer-icons{
     color:#DAFFED;
     transition: 0.5s all;

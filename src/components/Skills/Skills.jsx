@@ -38,28 +38,14 @@ const styles = theme => ({
   },
   paper: {
     opacity: "0.90",
-    // margin: "0 30px 0 30px",
     margin: "0 30px 10px 30px",
     borderRadius: "15px",
     borderTop: "rgb(172, 82, 142) solid 10px",
-    boxShadow: "0px 1px 4px 2px rgba(0,0,0,0.2)"
-    // width: "600px"
-
-    // "&::before": {
-    //     content: "attr(data-title)",
-    //     position: "absolute",
-    //     top: "6px",
-    //     padding: "0 10px 3px",
-    //     fontSize: "10px",
-    //     right: "20px",
-    //     textAlign: "right",
-    //     color: "#444",
-    //     fontWeight: "700",
-    //     letterSpacing: ".8px",
-    //     textTransform: "uppercase",
-    //     borderRadius: "0 0 5px 5px",
-    //     background: "#ddd"
-    // }
+    boxShadow: "0px 1px 4px 2px rgba(0,0,0,0.2)",
+    // width: "600px",
+    [theme.breakpoints.down("xs")]: {
+      margin: "0 10px 0 10px"
+    }
   },
   stack: {
     display: "flex",
@@ -99,13 +85,13 @@ const Skills = props => {
             Stack
           </h1>
         </div>
-        <Fade cascade>
-          <div className={classes.stack}>
+        <div className={classes.stack}>
+          <Fade bottom>
             <NavPills
               color="primary"
               horizontal={{
-                tabsGrid: { xs: 12, sm: 4, md: 3 },
-                contentGrid: { xs: 12, sm: 8, md: 9 }
+                tabsGrid: { xs: 12, sm: 2, md: 3 },
+                contentGrid: { xs: 12, sm: 10, md: 9 }
               }}
               tabs={[
                 {
@@ -113,6 +99,7 @@ const Skills = props => {
                   tabIcon: LaptopIcon,
                   tabContent: (
                     <Paper className={classes.paper} data-text="frontend">
+                      <h3 className="skills-header">FRONT-END</h3>
                       <List className={classes.root}>
                         <ListItem button className={classes.listItem}>
                           <div className={classes.avatar}>
@@ -201,6 +188,7 @@ const Skills = props => {
                   tabIcon: Reorder,
                   tabContent: (
                     <Paper className={classes.paper}>
+                      <h3 className="skills-header">BACK-END</h3>
                       <List className={classes.root}>
                         <ListItem button className={classes.listItem}>
                           <div className={classes.avatar}>
@@ -315,6 +303,7 @@ const Skills = props => {
                   tabIcon: DevBoard,
                   tabContent: (
                     <Paper className={classes.paper} data-text="Frameworks">
+                      <h3 className="skills-header">ADDITIONAL FRAMEWORKS</h3>
                       <List className={classes.root}>
                         <ListItem button className={classes.listItem}>
                           <div className={classes.avatar}>
@@ -402,7 +391,8 @@ const Skills = props => {
                   tabButton: "Cloud and Compilers",
                   tabIcon: CloudIcon,
                   tabContent: (
-                    <Paper className={classes.paper} data-text="Frameworks">
+                    <Paper className={classes.paper} data-text="Cloud">
+                      <h3 className="skills-header">CLOUD AND COMPILERS</h3>
                       <List className={classes.root}>
                         <ListItem button className={classes.listItem}>
                           <div className={classes.avatar}>
@@ -527,8 +517,8 @@ const Skills = props => {
                 }
               ]}
             />
-          </div>
-        </Fade>
+          </Fade>
+        </div>
       </div>
     </div>
   );
