@@ -51,7 +51,7 @@ const projects = [
     },
     {
         title: "Finesse",
-        image: "assets/images/Finesse.png",
+        image: "assets/images/Finesse.PNG",
         description: "Finesse is a full-stack application that allows you to scrape the most recent clothing sale items from your favorite brands at affordable prices, comment and write notes on the best products, and store them within your collection!",
         readme: "assets/READMEs/Finesse.md",
         github: "https://github.com/sajeelmalik/Finesse",

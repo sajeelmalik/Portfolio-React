@@ -19,7 +19,8 @@ const navPillsStyle = theme => ({
     [theme.breakpoints.down("xs")]: {
       display: "flex !important",
       // flexWrap: "wrap",
-      flexDirection: "row"
+      flexDirection: "row",
+      justifyContent: "space-between"
       // maxWidth: "100vw"
     }
   },
@@ -38,7 +39,7 @@ const navPillsStyle = theme => ({
     position: "relative",
     display: "block",
     borderRadius: "30px",
-    minWidth: "100px",
+    minWidth: "80px",
     textAlign: "center",
     transition: "all .3s",
     padding: "10px 15px",
