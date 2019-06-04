@@ -19,219 +19,225 @@ Text:
   justify-content: center 
 } */
 
-
 /* SPLASH PAGE STYLING - INTRODUCTION, RADIAL GRADIENT, AND FIREWORKS */
-.introduction{
-    position: relative;
-    width: 100%;
-    height: 100vh;
-    overflow: hidden;
-    cursor: crosshair;
-  
-  }
-  
-  .radial-gradient {
-    position:absolute;
-    top:0px;
-    left:0px;
-    height:100vh;
-    width:100%;
-    z-index: -1;
-    overflow: hidden;
-    transition: 1s ease;
-    /*Fallback if gradients don't work */
-    background: #f8f0cd;
-    /*Linear gradient... */
-    background: 
-      radial-gradient(
-       at center, #f5f5f5, #f8f0cd
-      );
-  }
-  
-  canvas{
-    position:absolute;
-    top:0px;
-    left:0px;
-    height:100vh;
-    width:100%;
-  }
-  
-  h1{
-    font-family: 'Oswald', sans-serif;
-    text-align: center;
-    font-size: 64px;
-    letter-spacing: 3px;
-  }
-  
-  h2, h3{
-    font-family: "Montserrat", sans-serif !important;
-    font-weight: bold;
-  } 
-  h2{
-    font-size: 1.5em;
-    margin-block-start: 0.83em;
-    margin-block-end: 0.83em;
-    margin-inline-start: 0px;
-    margin-inline-end: 0px;
-  }
-  h3{
-    font-size: 1.17em;
-    margin-block-start: 1em;
-    margin-block-end: 1em;
-    margin-inline-start: 0px;
-    margin-inline-end: 0px;
-  }
-  
-  th, ul, p{
-    font-family: 'Lato', sans-serif !important;
-  }
-  
-  td{
-    padding: 5px;
-  }
-  
-  .title{
-    margin: 17% 0 23px 0;
-    position: relative;
-    /* top: 15%; */
-    height: 10px;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-  }
-  
-  .title h1{
-    width: 40%;
-    font-family: 'Oswald', sans-serif;
-    text-align: center;
-    font-size: 72px;
-    font-weight: 300;
-    letter-spacing: 4px;
-    color: rgb(91, 90, 104);
-    cursor: cell;
-    transition: 1.5s ease;
-  
-    /* font-weight: bold; */
-  }
-  
-  .title h1:hover{
-    color: rgb(43, 43, 49);
-    text-shadow: 1px 1px 1px 1px rgb(96, 96, 104);
-    /* background-color: #ffe880; */
-  }
-  
-  .title h1::selection {
-    background: #ffe880; /* WebKit/Blink Browsers */
-    text-transform: uppercase;
-    color: white;
-  }
-  
-  .name {
-    position: relative;
-    display: inline-block;
-    transition: color 0.2s ease;
-  }
-  
-  .name::after, .name::before {
-    content: "";
-    position: absolute;
-    width: 0;
-    right: 0;
-    height: 20px;
-    bottom: -18px;
-    z-index: -1;
-  }
-  
-  .name:hover::after, .name:hover::before {
-    display: block;
-    width: 100%;
-    left: 0;
-    bottom: -18px;
-  }
-  
-  #sajeel::before{
-    -webkit-transition: width 0.6s cubic-bezier(0.51, 0.18, 0, 0.88) 0.1s;
-    transition: width 0.6s cubic-bezier(0.51, 0.18, 0, 0.88) 0.1s;
-    background: #fce995;
-  }
-  
-  #sajeel::after {
-    /* transition: width 0.2s cubic-bezier(0.29, 0.18, 0.26, 0.83); */
-    -webkit-transition: width 0.4s cubic-bezier(0.29, 0.18, 0.26, 0.83);
-    transition: width 0.4s cubic-bezier(0.29, 0.18, 0.26, 0.83);
-    background: #ffe880;
-  }
+.introduction {
+  position: relative;
+  width: 100%;
+  height: 100vh;
+  overflow: hidden;
+  cursor: crosshair;
+}
 
-  #loading {
-    position: relative;
-    margin: 43px auto 0 auto;
-    /* margin-bottom: 15px; */
-    width: 20px;
-    height: 20px;
-    background-color: transparent;
-    transition: 0.5s ease;
-  }
-  
-  .social-buttons{
-    margin: auto;
-    position: relative;
-    display: flex;
-    width: 30%;
-    align-items: center;
-    justify-content: space-evenly;
-    transition: 1.5s ease;
-  }
-  
-  .linkedin-icon, .github-icon, .instagram-icon, .medium-icon{
-    color: rgb(143, 142, 142);
-    transition: 0.3s ease-out;
-    /* text-shadow: 0.5px 0.5px 0.5px rgb(149, 149, 156); */
-  }
-  
-  .linkedin-icon:hover {
-    color: rgb(47, 101, 218);
-    /* transition: 0.3s ease; */
-    font-size: 54px;
-    text-shadow: 0.5px 0.5px 0.5px rgb(47, 101, 218);
-  
-  }
-  
-  .github-icon:hover {
-    color: black;
-    /* transition: 0.3s ease; */
-    font-size: 54px;
-    text-shadow: 0.5px 0.5px 0.5px black;
-  }
-  
-  /* .instagram-icon:hover {
+.radial-gradient {
+  position: absolute;
+  top: 0px;
+  left: 0px;
+  height: 100vh;
+  width: 100%;
+  z-index: -1;
+  overflow: hidden;
+  transition: 1s ease;
+  /*Fallback if gradients don't work */
+  background: #f8f0cd;
+  /*Linear gradient... */
+  background: radial-gradient(at center, #f5f5f5, #f8f0cd);
+}
+
+canvas {
+  position: absolute;
+  top: 0px;
+  left: 0px;
+  height: 100vh;
+  width: 100%;
+}
+
+h1 {
+  font-family: "Oswald", sans-serif;
+  text-align: center;
+  font-size: 64px;
+  letter-spacing: 3px;
+}
+
+h2,
+h3 {
+  font-family: "Montserrat", sans-serif !important;
+  font-weight: bold;
+}
+h2 {
+  font-size: 1.5em;
+  margin-block-start: 0.83em;
+  margin-block-end: 0.83em;
+  margin-inline-start: 0px;
+  margin-inline-end: 0px;
+}
+h3 {
+  font-size: 1.17em;
+  margin-block-start: 1em;
+  margin-block-end: 1em;
+  margin-inline-start: 0px;
+  margin-inline-end: 0px;
+}
+
+th,
+ul,
+p {
+  font-family: "Lato", sans-serif !important;
+}
+
+td {
+  padding: 5px;
+}
+
+.title {
+  margin: 17% 0 23px 0;
+  position: relative;
+  /* top: 15%; */
+  height: 10px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.title h1 {
+  width: 40%;
+  font-family: "Oswald", sans-serif;
+  text-align: center;
+  font-size: 72px;
+  font-weight: 300;
+  letter-spacing: 4px;
+  color: rgb(91, 90, 104);
+  cursor: cell;
+  transition: 1.5s ease;
+
+  /* font-weight: bold; */
+}
+
+.title h1:hover {
+  color: rgb(43, 43, 49);
+  text-shadow: 1px 1px 1px 1px rgb(96, 96, 104);
+  /* background-color: #ffe880; */
+}
+
+.title h1::selection {
+  background: #ffe880; /* WebKit/Blink Browsers */
+  text-transform: uppercase;
+  color: white;
+}
+
+.name {
+  position: relative;
+  display: inline-block;
+  transition: color 0.2s ease;
+}
+
+.name::after,
+.name::before {
+  content: "";
+  position: absolute;
+  width: 0;
+  right: 0;
+  height: 20px;
+  bottom: -18px;
+  z-index: -1;
+}
+
+.name:hover::after,
+.name:hover::before {
+  display: block;
+  width: 100%;
+  left: 0;
+  bottom: -18px;
+}
+
+#sajeel::before {
+  -webkit-transition: width 0.6s cubic-bezier(0.51, 0.18, 0, 0.88) 0.1s;
+  transition: width 0.6s cubic-bezier(0.51, 0.18, 0, 0.88) 0.1s;
+  background: #fce995;
+}
+
+#sajeel::after {
+  /* transition: width 0.2s cubic-bezier(0.29, 0.18, 0.26, 0.83); */
+  -webkit-transition: width 0.4s cubic-bezier(0.29, 0.18, 0.26, 0.83);
+  transition: width 0.4s cubic-bezier(0.29, 0.18, 0.26, 0.83);
+  background: #ffe880;
+}
+
+#loading {
+  position: relative;
+  margin: 43px auto 0 auto;
+  /* margin-bottom: 15px; */
+  width: 20px;
+  height: 20px;
+  background-color: transparent;
+  transition: 0.5s ease;
+}
+
+.social-buttons {
+  margin: auto;
+  position: relative;
+  display: flex;
+  width: 30%;
+  align-items: center;
+  justify-content: space-evenly;
+  transition: 1.5s ease;
+}
+
+.linkedin-icon,
+.github-icon,
+.instagram-icon,
+.medium-icon {
+  color: rgb(143, 142, 142);
+  transition: 0.3s ease-out;
+  /* text-shadow: 0.5px 0.5px 0.5px rgb(149, 149, 156); */
+}
+
+.linkedin-icon:hover {
+  color: rgb(47, 101, 218);
+  /* transition: 0.3s ease; */
+  font-size: 54px;
+  text-shadow: 0.5px 0.5px 0.5px rgb(47, 101, 218);
+}
+
+.github-icon:hover {
+  color: black;
+  /* transition: 0.3s ease; */
+  font-size: 54px;
+  text-shadow: 0.5px 0.5px 0.5px black;
+}
+
+/* .instagram-icon:hover {
     background-color: linear-gradient(to top right, #ff6600 0%, #ff66ff 100%);
     transition: 0.3s ease;
   } */
-  
-  /* add hover gradient to instagram */
-  .instagram-icon:hover {
-    background: -webkit-gradient(linear, left bottom, left top, from(#ff6600), to(#ff66ff));
-    -webkit-background-clip: text;
-    background-clip: text;
-    -webkit-text-fill-color: transparent;
-    /* transition: 0.3s ease; */
-    font-size: 56px;
-    /* text-shadow: 0.5px 1.5px 0.5px #ff66ba7c; */
-  
-  }
-  
-  .medium-icon:hover {
-    color: black;
-    /* transition: 0.3s ease; */
-    font-size: 54px;
-    text-shadow: 0.5px 0.5px 0.5px black;
-  }
 
-  
-.bio{
+/* add hover gradient to instagram */
+.instagram-icon:hover {
+  background: -webkit-gradient(
+    linear,
+    left bottom,
+    left top,
+    from(#ff6600),
+    to(#ff66ff)
+  );
+  -webkit-background-clip: text;
+  background-clip: text;
+  -webkit-text-fill-color: transparent;
+  /* transition: 0.3s ease; */
+  font-size: 56px;
+  /* text-shadow: 0.5px 1.5px 0.5px #ff66ba7c; */
+}
+
+.medium-icon:hover {
+  color: black;
+  /* transition: 0.3s ease; */
+  font-size: 54px;
+  text-shadow: 0.5px 0.5px 0.5px black;
+}
+
+.bio {
   display: none;
   position: relative;
-  font-family: 'Lato', sans-serif;
+  font-family: "Lato", sans-serif;
   font-size: 1.5em;
   line-height: 2.3em;
   letter-spacing: 0.7px;
@@ -245,19 +251,19 @@ Text:
   text-transform: uppercase;
 }
 
-#about-link{
-  color: #ED254E;
+#about-link {
+  color: #ed254e;
 }
 
-#portfolio-link{
-  color: #3943B7;
+#portfolio-link {
+  color: #3943b7;
 }
 
-#skills-link{
+#skills-link {
   color: rgb(158, 58, 125);
 }
 
-#contact-link{
+#contact-link {
   color: rgb(125, 219, 99);
 }
 
@@ -265,14 +271,15 @@ Text:
   position: relative;
   display: inline-block;
   transition: color 0.2s ease;
-  text-decoration: none;  
+  text-decoration: none;
 }
 
-.bio-links:hover{
-  text-decoration: none;  
+.bio-links:hover {
+  text-decoration: none;
 }
 
-.bio-links::after, .bio-links::before {
+.bio-links::after,
+.bio-links::before {
   content: "";
   position: absolute;
   width: 0;
@@ -282,14 +289,15 @@ Text:
   z-index: -1;
 }
 
-.bio-links:hover::after, .bio-links:hover::before {
+.bio-links:hover::after,
+.bio-links:hover::before {
   display: block;
   width: 100%;
   left: 0;
   bottom: 8px;
 }
 
-#about-link::before{
+#about-link::before {
   -webkit-transition: width 0.6s cubic-bezier(0.51, 0.18, 0, 0.88) 0.1s;
   background: rgb(238, 125, 147);
   transition: width 0.6s cubic-bezier(0.51, 0.18, 0, 0.88) 0.1s;
@@ -304,8 +312,7 @@ Text:
   background: rgb(233, 74, 106);
 }
 
-
-#skills-link::before{
+#skills-link::before {
   -webkit-transition: width 0.6s cubic-bezier(0.51, 0.18, 0, 0.88) 0.1s;
   background: rgb(158, 58, 125);
   transition: width 0.6s cubic-bezier(0.51, 0.18, 0, 0.88) 0.1s;
@@ -318,11 +325,9 @@ Text:
   background: rgb(167, 13, 116);
   transition: width 0.4s cubic-bezier(0.29, 0.18, 0.26, 0.83);
   background: rgb(167, 13, 116);
-  
 }
 
-
-#portfolio-link::before{
+#portfolio-link::before {
   -webkit-transition: width 0.6s cubic-bezier(0.51, 0.18, 0, 0.88) 0.1s;
   background: rgb(124, 129, 187);
   transition: width 0.6s cubic-bezier(0.51, 0.18, 0, 0.88) 0.1s;
@@ -337,7 +342,7 @@ Text:
   background: rgb(85, 93, 182);
 }
 
-#contact-link::before{
+#contact-link::before {
   -webkit-transition: width 0.6s cubic-bezier(0.51, 0.18, 0, 0.88) 0.1s;
   background: rgb(173, 233, 156);
   transition: width 0.6s cubic-bezier(0.51, 0.18, 0, 0.88) 0.1s;
@@ -352,9 +357,59 @@ Text:
   background: rgb(148, 214, 130);
 }
 
+.down-arrow {
+  position: absolute;
+  bottom: 40px;
+  left: 50%;
+  z-index: 200;
 
-  /* ANimations */
+  transform: translateX(-50%);
+  width: 4em !important;
+  height: 4em !important;
+  color: #ffe880;
+  animation-name: fadeIn, pulse;
+  animation-duration: 1s, 3s;
+  animation-iteration-count: 1, infinite;
 
-  .fadeOut{
-    opacity: 0;
+  -webkit-filter: drop-shadow(0px 3px 4px #3a310a30);
+    filter: drop-shadow(0px 3px 4px #3a310a30);
+}
+
+/* .down-arrow:first-child {
+  width: 50px;
+} */
+
+/* ANimations */
+
+.fadeOut {
+  opacity: 0;
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0
   }
+  to {
+    opacity: 1;
+  }
+}
+
+@keyframes pulse {
+  0% {
+  }
+  /* 50% {
+    width: 3.25em;
+    height: 3.25em;
+    -webkit-filter: drop-shadow(0px 3px 4px #3a310ab6);
+    filter: drop-shadow(0px 3px 4px #3a310ab6);
+  } */
+  50% {
+    width: 4.5em;
+    height: 4.5em;
+    -webkit-filter: drop-shadow(0px 3px 4px #3a310a85);
+    filter: drop-shadow(0px 3px 4px #3a310a85);
+  }
+  100%{
+
+  }
+}

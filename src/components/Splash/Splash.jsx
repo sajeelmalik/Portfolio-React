@@ -1,5 +1,8 @@
 import React, { Component } from 'react';
 
+// Material
+import DownArrow from "@material-ui/icons/ArrowDropDownTwoTone"
+
 // Animations
 import Fade from 'react-reveal/Fade';
 
@@ -125,7 +128,7 @@ class Splash extends Component {
                     </div>
                     {/* {this.state.showBio ? </Fade> : ""} */}
 
-
+                    <DownArrow className = "down-arrow" onClick={() => this.props.scrollToSkills()} style={{ display: this.state.showBio ? "block" : "none" }}/>
                 </div>
 
             </div>

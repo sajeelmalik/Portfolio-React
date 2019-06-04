@@ -1,4 +1,5 @@
 import React, { Component } from "react";
+import { Redirect } from "react-router-dom";
 import PropTypes from "prop-types";
 // Components
 
@@ -15,7 +16,7 @@ import IconButton from "@material-ui/core/IconButton";
 
 import ShareIcon from "@material-ui/icons/Share";
 
-const styles = (theme) => ({
+const styles = theme => ({
   card: {
     width: "325px",
     maxWidth: 345,
@@ -63,11 +64,13 @@ const Project = props => {
   return (
     <Card className={props.featured ? classes.featuredCard : classes.card}>
       <CardActionArea>
-        <CardMedia
-          className={classes.media}
-          image={props.image}
-          title={props.title}
-        />
+        <a href={props.deployed} target="_blank" rel="noopener noreferrer" alt = {props.title + " site link"}>
+          <CardMedia
+            className={classes.media}
+            image={props.image}
+            title={props.title}
+          />
+        </a>
         <CardContent>
           <Typography
             gutterBottom
@@ -85,12 +88,12 @@ const Project = props => {
       <CardActions className={classes.cardActions}>
         <div>
           <IconButton aria-label="Share" color="secondary">
-            <a target="_blank" rel="noopener noreferrer" href={props.github}>
+            <a target="_blank" rel="noopener noreferrer" href={props.github} alt = {"Github Repo Link for " + props.title}>
               <i className="fab fa-github" />
             </a>
           </IconButton>
           <IconButton aria-label="Share" color="secondary">
-            <a target="_blank" rel="noopener noreferrer" href={props.deployed}>
+            <a target="_blank" rel="noopener noreferrer" href={props.deployed} alt = {"Icon that links to Deployed site for " + props.title}>
               <ShareIcon />
             </a>
           </IconButton>

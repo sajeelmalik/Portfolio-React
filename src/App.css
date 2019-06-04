@@ -18,7 +18,7 @@ img{
 
 /* Media Queries */
 
-@media only screen and (max-width: 1440px){
+@media only screen and (max-width: 1400px){
   
   #featured-title {
     margin-right: 0px;
@@ -34,7 +34,7 @@ img{
 
 @media only screen and (max-width: 768px) {
   .title {
-    margin-top: 50%;
+    margin-top: 45%;
   }
   #sajeel {
     width: 80%;
@@ -56,7 +56,7 @@ img{
 
 @media only screen and (max-width: 430px) {
   .title {
-    margin-top: 60%;
+    margin-top: 50%;
   }
   #sajeel {
     width: 90%;
@@ -92,7 +92,7 @@ img{
 
 @media only screen and (max-width: 376px) {
   .title {
-    margin-top: 60%;
+    margin-top: 50%;
   }
   #sajeel {
     width: 95%;
@@ -108,5 +108,9 @@ img{
 
   .title h1 {
     font-size: 54px;
+  }
+
+  #copyright p {
+    font-size: 0.8em;
   }
 }
