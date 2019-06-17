@@ -26,7 +26,7 @@ const styles = theme => ({
     zIndex: "-3",
     paddingTop: "10%",
     paddingBottom: "5%"
-  },
+  }
   // aboutBackground: {
   //   position: "absolute",
   //   top: "0px",
@@ -144,7 +144,8 @@ class About extends Component {
                   minimally-invasive surgery. I have tutored high-school
                   students extensively to improve their SAT, ACT, and SAT II
                   scores to succesfully earn admission to the top colleges of
-                  their choice.
+                  their choice. Currently, I am part of the teaching staff for
+                  UC Berkeley's full-stack software engineering course, where I develop unique course material and help instruct the next generation of software engineers
                 </p>
                 <p className="about-me-text">
                   In the past few years, I have developed an unwavering{" "}
