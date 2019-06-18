@@ -11,6 +11,7 @@ import About from "../../pages/About";
 import scrollToComponent from 'react-scroll-to-component';
 
 // STYLING
+import anime from "animejs";
 import Fade from 'react-reveal/Fade';
 import "./Main.css";
 
@@ -18,8 +19,18 @@ import "./Main.css";
 class Main extends Component {
 
     state = {
-        showPortfolio: false
+        showPortfolio: false,
+        dividerAnimationPlayed: false
     }
+
+    componentDidMount() {
+        window.addEventListener('scroll', this.handleScroll)
+    }
+
+    componentWillUnmount() {
+        window.removeEventListener('scroll', this.handleScroll)
+    }
+
 
     handlePortfolioOpen = () => {
         this.setState({
@@ -45,14 +56,52 @@ class Main extends Component {
         scrollToComponent(this.About, { offset: 0, align: 'top', duration: 1500 })
     }
 
+    handleScroll = () => {
+        if(!this.state.dividerAnimationPlayed && window.pageYOffset > 2.2 * window.innerHeight){
+            this.stagger();
+
+            this.setState({
+                dividerAnimationPlayed: true
+            })
+        }
+
+        console.log("offset", window.pageYOffset, " height" ,window.innerHeight);
+    }
+
+    stagger() {
+        anime({
+            targets: '#divider .divider-el',
+            translateX: "100vw",
+            transform: "skew(0deg, -3deg)",
+            opacity: "1",
+            delay: anime.stagger(100), // increase delay by 100ms for each elements.
+            // delay: ((el, i) => 1000 * i), // increase delay by 100ms for each elements.
+            easing: "easeInQuad"
+          });
+    }
+
     render() {
 
         console.log("showPortfolio", this.state.showPortfolio)
         return (
-            <React.Fragment>
+            <React.Fragment >
                 <Splash showPortfolio={this.handlePortfolioOpen} scrollToPortfolio={this.handleScrolltoPortfolio} scrollToSkills={this.handleScrolltoSkills} scrollToAbout={this.handleScrolltoAbout} scrollToFooter={this.handleScrolltoFooter}></Splash>
+
                 <Skills show={this.state.showPortfolio ? "block" : "none"} ref={(section) => { this.Skills = section; }}></Skills>
-                <div id="divider" style={{ display: this.state.showPortfolio ? "block" : "none" }}></div>
+
+                <div id="divider" style={{ display: this.state.showPortfolio ? "block" : "none" }}>
+                    <div className="divider-el" id = "el1"></div>
+                    <div className="divider-el" id = "el2" ></div>
+                    <div className="divider-el" id = "el3" ></div>
+                    <div className="divider-el" id = "el4" ></div>
+                    <div className="divider-el" id = "el5" ></div>
+                    <div className="divider-el" id = "el6" ></div>
+                    <div className="divider-el" id = "el7" ></div>
+                    <div className="divider-el" id = "el8" ></div>
+                    <div className="divider-el" id = "el9" ></div>
+                    <div className="divider-el" id = "el10" ></div>
+                </div>
+
                 <Projects show={this.state.showPortfolio ? "block" : "none"} ref={(section) => { this.Portfolio = section; }}></Projects>
                 <About show={this.state.showPortfolio ? "block" : "none"} ref={(section) => { this.About = section; }} />
                 <footer id="footer" style={{ display: this.state.showPortfolio ? "flex" : "none" }}>

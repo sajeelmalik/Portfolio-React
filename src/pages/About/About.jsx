@@ -145,7 +145,7 @@ class About extends Component {
                   students extensively to improve their SAT, ACT, and SAT II
                   scores to succesfully earn admission to the top colleges of
                   their choice. Currently, I am part of the teaching staff for
-                  UC Berkeley's full-stack software engineering course, where I develop unique course material and help instruct the next generation of software engineers
+                  UC Berkeley's full-stack software engineering course, where I develop unique course material and help instruct the next generation of software engineers.
                 </p>
                 <p className="about-me-text">
                   In the past few years, I have developed an unwavering{" "}

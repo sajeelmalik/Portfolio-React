@@ -1,14 +1,75 @@
+/* divider linear gradients
+background: linear-gradient(#A4036F, #A4036F);
+background: linear-gradient(#A4036F, #8A1381);
+background: linear-gradient(#8A1381, #7F1A89);
+background: linear-gradient(#7F1A89, #74208F);
+background: linear-gradient(#74208F, #662899);
+background: linear-gradient(#662899, #5D2E9F);
+background: linear-gradient(#5D2E9F, #5234A6);
+background: linear-gradient(#5234A6, #493AAC);
+background: linear-gradient(#493AAC, #403FB2);
+background: linear-gradient(#403FB2, #3943B7); */
+
+
 .fireworks{
     max-width: 100%;
 }
 
 #divider{
-    transform: skew(0deg, -3deg);
-    background: linear-gradient(#A4036F 10%, 40%, #3943B7 100%);
+    transform: skew(0deg, -3deg) translateX(-100vw);
+    /* background: linear-gradient(#A4036F 10%, 40%, #3943B7 100%); */
     width: 100%;
     height: 40vh;
+    /* max-width: 100vw; */
     /* animation-name: extend;
     animation-duration: 10s; */
+}
+
+.divider-el{
+    position: relative;
+    width: 100%;
+    height: 10%;
+    /* opacity: 0; */
+}
+
+#el1{
+    background: linear-gradient(#A4036F, #A4036F);
+}
+#el2{
+    background: linear-gradient(#A4036F, #8A1381);
+    top: -1px;
+}
+#el3{
+    background: linear-gradient(#8A1381, #7F1A89);
+    top: -2px;
+}
+#el4{
+    background: linear-gradient(#7F1A89, #74208F);
+    top: -3px;
+}
+#el5{
+    background: linear-gradient(#74208F, #662899);
+    top: -4px;
+}
+#el6{
+    background: linear-gradient(#662899, #5D2E9F);
+    top: -5px;
+}
+#el7{
+    background: linear-gradient(#5D2E9F, #5234A6);
+    top: -6px;
+}
+#el8{
+    background: linear-gradient(#5234A6, #493AAC);
+    top: -7px;
+}
+#el9{
+    background: linear-gradient(#493AAC, #403FB2);
+    top: -8px;
+}
+#el10{
+    background: linear-gradient(#403FB2, #3943B7);
+    top: -9px;
 }
 
 #footer{
