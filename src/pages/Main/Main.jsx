@@ -65,7 +65,6 @@ class Main extends Component {
             })
         }
 
-        console.log("offset", window.pageYOffset, " height" ,window.innerHeight);
     }
 
     stagger() {
