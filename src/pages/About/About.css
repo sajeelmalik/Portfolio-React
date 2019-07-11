@@ -1,6 +1,7 @@
 #about {
   width: 100%;
   margin-bottom: 40px;
+  z-index: 3;
 }
 
 .about-me {
@@ -18,6 +19,8 @@
   border: 10px solid #fce575;
   box-shadow: 0px 1px 4px #ffd447;
   /* box-shadow: 0px 0px 6px #FCE575; */
+  /* animation: ripple 0.9s linear infinite; */
+  /* z-index: 300; */
 }
 
 .profile-pic {
@@ -27,7 +30,7 @@
   transition: 0.2s ease;
 }
 
-.profile-pic-overlay{
+.profile-pic-overlay {
   position: absolute;
   top: 0;
   bottom: 0;
@@ -48,37 +51,36 @@
   border-radius: 50%;
 }
 
-.pic-container:hover .profile-pic-overlay{
+.pic-container:hover .profile-pic-overlay {
   visibility: visible;
-  opacity: 1;     
+  opacity: 1;
   text-decoration: none;
 }
 
-.pic-container:hover .profile-pic{
-  opacity: 0.65;     
+.pic-container:hover .profile-pic {
+  opacity: 0.65;
 }
 
-.play-button{
+.play-button {
   transition: 0.2s ease;
   transform: translateY(1em);
   /* color: white; */
 }
 
-.pic-container:hover .play-button{
+.pic-container:hover .play-button {
   transition: 0.2s ease;
-  transform: translateY(0); 
+  transform: translateY(0);
   cursor: pointer;
 }
 
-
-.play-icon{
+.play-icon {
   font-size: 9em !important;
   opacity: 0.75;
   transition: 0.2s ease-in-out;
 }
 
-.play-icon:active{
-  transform: scale(1.1)
+.play-icon:active {
+  transform: scale(1.1);
 }
 
 .fab-play {
@@ -95,6 +97,7 @@
 .about-me-body {
   margin: auto;
   width: 60%;
+  z-index: 3;
 }
 
 .about-me-text {
@@ -122,7 +125,6 @@
 .rockets-highlight:hover {
   color: rgb(245, 222, 222);
   text-shadow: 0px 0px 2px rgba(0, 0, 0, 0.5);
-
 }
 
 .about-highlight::after,
@@ -185,5 +187,20 @@
   to {
     -webkit-transform: translate3d(0, 0, 0);
     transform: translate3d(0, 0, 0);
+  }
+}
+
+@keyframes ripple {
+  0% {
+    box-shadow: 0 0 0 0 rgba(252, 233, 149, 0.4),
+      0 0 0 1em rgba(252, 233, 149, 0.4), 
+      0 0 0 3em rgba(252, 233, 149, 0.4),
+      0 0 0 5em rgba(252, 233, 149, 0.4);
+  }
+  100% {
+    box-shadow: 0 0 0 1em rgba(252, 233, 149, 0.4),
+      0 0 0 3em rgba(252, 233, 149, 0.4), 
+      0 0 0 5em rgba(252, 233, 149, 0.4),
+      0 0 0 8em rgba(252, 233, 149, 0);
   }
 }

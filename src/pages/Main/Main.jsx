@@ -124,13 +124,7 @@ class Main extends Component {
                                     </a>
 
                                 </div>
-                                {/* <div id="footer-tags">
-                                    <p>Sajeel Malik</p>
-                                    <p id="footer-text">© 2018 Sajeel Malik. All rights reserved. Developed in San Francisco.</p>
-                                </div> */}
-
                             </div>
-                            
                         </Fade>
                     </div>
                 </footer>
